@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Filip Stanicak — Senior Consultant | Business Analyse &amp; Agile Delivery</title>
-<meta name="description" content="Senior Consultant mit rund sieben Jahren Erfahrung in Automotive und Financial Services: Requirements Engineering, Vorgehensmodelle, Test- und Releasemanagement sowie agile Teamsteuerung.">
+<meta name="description" content="Senior Consultant für Business Analyse, Prozessdesign und agile Delivery. Baut Release- und Testmanagement, Vorgehensmodelle und KPI-Systeme dort auf, wo es sie vorher nicht gab. Seit 2019 im Automotive-Umfeld.">
 <meta name="author" content="Filip Stanicak">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://filipstanicak.github.io/">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Filip Stanicak — Senior Consultant">
-<meta property="og:description" content="Requirements Engineering, Vorgehensmodelle, Test- und Releasemanagement, agile Teamsteuerung. Automotive &amp; Financial Services.">
+<meta property="og:description" content="Baut Release- und Testmanagement, Vorgehensmodelle und KPI-Systeme dort auf, wo es sie vorher nicht gab. Business Analyst, Scrum Master und Lead Consultant.">
 <meta property="og:locale" content="de_DE">
 <meta property="og:image" content="https://filipstanicak.github.io/assets/portrait.jpg">
 
@@ -251,6 +251,64 @@ strong{font-weight:600;color:var(--ink)}
 .focus__card p{margin-top:9px;font-size:.9062rem;color:var(--ink-2)}
 
 /* ============================================================
+   Muster: Ausgangslage -> Aufgebaut
+   ============================================================ */
+.pattern{border-top:1px solid var(--line-strong)}
+.pattern__head{
+  display:grid;grid-template-columns:1fr 40px 1fr;gap:22px;
+  padding:14px 0 12px;border-bottom:1px solid var(--line);
+}
+.pattern__head span{
+  font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);
+}
+.pattern__row{
+  display:grid;grid-template-columns:1fr 40px 1fr;gap:22px;align-items:center;
+  padding:17px 0;border-bottom:1px solid var(--line);
+}
+.pattern__row:hover .pattern__arrow{color:var(--accent);transform:translateX(3px)}
+.pattern__before{font-size:.9375rem;color:var(--ink-3)}
+.pattern__arrow{
+  color:var(--line-strong);display:grid;place-items:center;
+  transition:color .2s ease, transform .2s ease;
+}
+.pattern__arrow svg{width:20px;height:20px}
+.pattern__after{font-size:.9375rem;color:var(--ink);font-weight:500}
+@media (max-width:760px){
+  .pattern__head{display:none}
+  .pattern__row{grid-template-columns:1fr;gap:8px;padding:18px 0}
+  .pattern__before{order:1}
+  .pattern__before::before{
+    content:"Vorher";display:block;
+    font-size:.625rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-3);opacity:.75;margin-bottom:3px;
+  }
+  .pattern__arrow{order:2;justify-content:start;transform:rotate(90deg);transform-origin:left center;height:16px;color:var(--accent)}
+  .pattern__after{order:3}
+  .pattern__after::before{
+    content:"Aufgebaut";display:block;
+    font-size:.625rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent-ink);margin-bottom:3px;
+  }
+}
+
+/* ============================================================
+   Eigene Projekte
+   ============================================================ */
+.builds{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media (max-width:820px){.builds{grid-template-columns:1fr}}
+.build{
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.build__kind{
+  font-size:.6875rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--accent-ink);
+}
+.build h3{margin-top:10px;font-size:1.0625rem;font-weight:600;line-height:1.35}
+.build p{margin-top:11px;font-size:.9062rem;color:var(--ink-2)}
+.build__stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:18px}
+
+/* ============================================================
    Timeline
    ============================================================ */
 .tl{position:relative}
@@ -419,9 +477,11 @@ strong{font-weight:600;color:var(--ink)}
     </a>
     <div class="nav__links">
       <a href="#profil">Profil</a>
+      <a href="#ansatz">Ansatz</a>
       <a href="#schwerpunkte">Schwerpunkte</a>
       <a href="#werdegang">Werdegang</a>
       <a href="#projekte">Projekte</a>
+      <a href="#eigenes">Eigenes</a>
       <a href="#kompetenzen">Kompetenzen</a>
       <a href="#kontakt">Kontakt</a>
     </div>
@@ -435,21 +495,20 @@ strong{font-weight:600;color:var(--ink)}
   <div class="wrap">
    <div class="hero__grid">
     <div>
-    <div class="hero__eyebrow">Automotive &amp; Financial Services</div>
+    <div class="hero__eyebrow">Aufbauen, wo noch nichts steht</div>
     <h1 class="hero__name">Filip Stanicak</h1>
     <p class="hero__role">Senior Consultant — <em>Business Analyse, Prozessdesign &amp; Agile Delivery</em></p>
 
     <p class="hero__lead">
-      Rund sieben Jahre Erfahrung an der Schnittstelle von Anforderungsmanagement, Prozess- und
-      Methodenarbeit sowie agiler Delivery — von Steuergerätefunktionen über digitale Kundenservices
-      bis zu Applikations- und Kalibrierungsprozessen.
+      In acht Kundenprojekten war die Aufgabe fast immer dieselbe: eine Funktion aufbauen, die es
+      vorher nicht gab. Releasemanagement, wo Releases ungesteuert liefen. Testmanagement, wo Testen
+      niemandes Aufgabe war. Ein Vorgehensmodell für zwei fusionierte Organisationen, die keines
+      hatten. Ein KPI-System, wo nach Bauchgefühl geschätzt wurde.
     </p>
     <p class="hero__lead">
-      Ich verantworte Themen von der fachlichen Analyse über die Einführung von Vorgehensmodellen,
-      Test- und Releasemanagement bis zur Steuerung agiler Teams. Erfahren in skalierten und
-      regulierten Entwicklungsumgebungen, in der fachlichen Führung kleiner Beratungsteams und darin,
-      Prozesse dort aufzubauen, wo bisher keine bestanden. Zusätzlicher Schwerpunkt: der Einsatz von
-      AI in Business Analyse und Beratung.
+      Seit 2019 im Automotive-Umfeld, seit 2021 in der Beratung — als Business Analyst, Scrum Master
+      und Lead Consultant. In skalierten und regulierten Entwicklungsumgebungen, von der Kunden-App
+      bis zum Steuergerät. Nebenbei baue ich die Werkzeuge, die mir in dieser Arbeit fehlen, selbst.
     </p>
 
     <div class="actions">
@@ -479,12 +538,81 @@ strong{font-weight:600;color:var(--ink)}
    </div><!-- /hero__grid -->
 
     <div class="facts">
-      <div class="fact"><div class="fact__n">7 Jahre</div><div class="fact__l">Berufserfahrung in Automotive und Financial Services</div></div>
-      <div class="fact"><div class="fact__n">10 Projekte</div><div class="fact__l">bei Automobilherstellern, Zulieferern und einem Finanzdienstleister</div></div>
+      <div class="fact"><div class="fact__n">Seit 2019</div><div class="fact__l">im Automotive-Umfeld, seit 2021 in der Beratung</div></div>
+      <div class="fact"><div class="fact__n">8 Kundenprojekte</div><div class="fact__l">bei drei OEMs, einem Automotive-Softwareunternehmen, einem Nutzfahrzeughersteller und einem Finanzdienstleister</div></div>
       <div class="fact"><div class="fact__n">3 Rollen</div><div class="fact__l">Business Analyst, Scrum Master und Lead Consultant</div></div>
     </div>
   </div>
 </header>
+
+<!-- ============================ MUSTER ============================ -->
+<section class="section" id="ansatz">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div class="section__kicker">Der rote Faden</div>
+      <h2 class="section__title">Acht Mal dieselbe Ausgangslage</h2>
+      <p class="section__sub">
+        Über drei Arbeitgeber und acht Kundenprojekte hinweg lag die Aufgabe fast immer darin, eine
+        Funktion zu etablieren, die es in der Organisation noch nicht gab — nicht darin, eine
+        bestehende zu optimieren.
+      </p>
+    </div>
+
+    <div class="pattern reveal">
+      <div class="pattern__head">
+        <span>Ausgangslage</span><span></span><span>Aufgebaut</span>
+      </div>
+
+      <div class="pattern__row">
+        <div class="pattern__before">Releases liefen im Zwei-Wochen-Takt, ohne steuernden Prozess</div>
+        <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="pattern__after">Strukturiertes Releasemanagement über fünf Entwicklungsteams hinweg</div>
+      </div>
+
+      <div class="pattern__row">
+        <div class="pattern__before">Testen war organisatorisch niemandes Aufgabe</div>
+        <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="pattern__after">Testmanagement und erstes teamübergreifendes Cross-Team mit sieben Mitarbeitenden</div>
+      </div>
+
+      <div class="pattern__row">
+        <div class="pattern__before">Zwei fusionierte Abteilungen ohne gemeinsames Vorgehensmodell</div>
+        <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="pattern__after">Vorgehensmodell aus SAFe und Systems Engineering für über 1.000 Mitarbeitende</div>
+      </div>
+
+      <div class="pattern__row">
+        <div class="pattern__before">Aufwände wurden geschätzt, ohne dass jemand die Treffsicherheit kannte</div>
+        <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="pattern__after">KPI-System, das Schätzabweichungen je Team sichtbar und damit steuerbar macht</div>
+      </div>
+
+      <div class="pattern__row">
+        <div class="pattern__before">Prozess- und Systemwissen verteilt über gewachsene Ablagen</div>
+        <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="pattern__after">Single Source of Truth auf Atlassian-Basis, konzipiert und in Umsetzung</div>
+      </div>
+
+      <div class="pattern__row">
+        <div class="pattern__before">Lizenzvergabe über E-Mail-Abstimmungen und mehrere Portale</div>
+        <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="pattern__after">Durchgängiger Prozess über rund acht angebundene Systeme</div>
+      </div>
+
+      <div class="pattern__row">
+        <div class="pattern__before">Rund 500 Dokumentationsseiten ohne Struktur und ohne Vorkontext</div>
+        <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="pattern__after">Neue Dokumentationsstruktur, inhaltlich zugeordnet und auffindbar</div>
+      </div>
+
+      <div class="pattern__row">
+        <div class="pattern__before">Über 60 Partner und Zulieferer ohne Konsolidierungslogik</div>
+        <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="pattern__after">Rahmenvertragsstrategie, die bündelt und Abhängigkeiten zugleich begrenzt</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============================ SCHWERPUNKTE ============================ -->
 <section class="section section--sunk" id="schwerpunkte">
@@ -563,7 +691,7 @@ strong{font-weight:600;color:var(--ink)}
             <li>Fachliche Leitung eines dreiköpfigen Beratungsteams bei der Entwicklung eines Vorgehensmodells aus SAFe und Systems Engineering für eine fusionierte Software-/Hardware-Organisation mit über 1.000 Mitarbeitenden</li>
             <li>Aufbau eines Testmanagements inklusive des ersten teamübergreifenden Cross-Teams für eine zuvor nicht etablierte Funktion</li>
             <li>Scrum Master für bis zu fünf Entwicklungsteams parallel sowie Einführung eines Releasemanagements in einer Umgebung ohne bestehenden Prozess</li>
-            <li>Entwicklung eines KPI-Systems zur Messung von Schätzgenauigkeit und monatlichen Kosten eines Agile Release Trains mit rund 25 Beteiligten — dadurch wurden systematische Fehlschätzungen eines Kernteams sichtbar</li>
+            <li>Entwicklung eines KPI-Systems, das Schätzabweichungen je Team und die monatlichen Kosten eines Agile Release Trains mit rund 25 Beteiligten messbar macht</li>
             <li>Evaluation von über 60 Partnern und Zulieferern sowie Erarbeitung einer Konsolidierungsstrategie über Rahmenverträge bei gleichzeitiger Begrenzung von Abhängigkeiten</li>
             <li>End-to-End-Test und fachliche Verantwortung für Fahrzeugfunktionen über die gesamte Kette von der Kunden-App bis zum Steuergerät</li>
             <li>Konzeption einer Single Source of Truth auf Atlassian-Basis für sämtliche Prozess- und Methodenartefakte</li>
@@ -626,8 +754,9 @@ strong{font-weight:600;color:var(--ink)}
       <div class="section__kicker">Projektübersicht</div>
       <h2 class="section__title">Ausgewählte Projekte</h2>
       <p class="section__sub">
-        Zehn Einsätze bei OEMs, einem Nutzfahrzeughersteller, einem Automotive-Softwareunternehmen und
-        einem Finanzdienstleister. Nach Themenschwerpunkt filterbar.
+        Acht Kundenprojekte bei drei OEMs, einem Automotive-Softwareunternehmen, einem Nutzfahrzeug-
+        hersteller und einem Finanzdienstleister — dazu die Werkstudentenzeit und interne Themen.
+        Nach Themenschwerpunkt filterbar.
       </p>
     </div>
 
@@ -681,7 +810,7 @@ strong{font-weight:600;color:var(--ink)}
         <ul class="bullets">
           <li>Konzeption und Einführung eines KPI-Systems, das geschätzte gegen tatsächlich erbrachte Story Points stellt und die Schätzgenauigkeit je Team messbar macht</li>
           <li>Ableitung der monatlichen Gesamtkosten des ART aus den erfassten Aufwänden</li>
-          <li>Ergebnis: systematische Unterschätzung im Core-Team wurde transparent und damit adressierbar</li>
+          <li>Ergebnis: Schätzabweichungen sind seither je Team sichtbar und damit steuerbar, statt über den gesamten Train gemittelt zu verschwinden</li>
         </ul>
         <div class="project__tags"><span class="tag">SAFe / ART</span><span class="tag">KPI-System</span><span class="tag">AWS-Migration</span></div>
       </article>
@@ -843,8 +972,50 @@ strong{font-weight:600;color:var(--ink)}
   </div>
 </section>
 
+<!-- ============================ EIGENES ============================ -->
+<section class="section" id="eigenes">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div class="section__kicker">Selbst gebaut</div>
+      <h2 class="section__title">Was ich außerhalb der Projekte baue</h2>
+      <p class="section__sub">
+        Analyse hört für mich nicht bei der Spezifikation auf. Wo ein Werkzeug fehlt, baue ich es —
+        das schärft das Verständnis dafür, was Umsetzung tatsächlich kostet.
+      </p>
+    </div>
+
+    <div class="builds">
+      <article class="build reveal">
+        <div class="build__kind">Internes Tool · MHP</div>
+        <h3>Retrospektiven-Tool</h3>
+        <p>
+          Eigenentwicklung zur Durchführung von Retrospektiven, entstanden aus der Arbeit als Scrum
+          Master: Die verfügbaren Werkzeuge passten nicht zum Ablauf, den die Teams tatsächlich
+          brauchten.
+        </p>
+        <div class="build__stack"></div>
+      </article>
+
+      <article class="build reveal">
+        <div class="build__kind">Diese Seite</div>
+        <h3>filipstanicak.github.io</h3>
+        <p>
+          Eine einzelne HTML-Datei ohne Framework und ohne Build-Schritt, rund 55 KB, auf GitHub
+          Pages gehostet. Dark Mode, responsives Layout und die Projektfilter laufen über CSS und
+          etwa 60 Zeilen JavaScript.
+        </p>
+        <div class="build__stack">
+          <span class="tag">HTML &amp; CSS</span><span class="tag">Vanilla JS</span>
+          <span class="tag">Git</span><span class="tag">GitHub Pages</span>
+          <span class="tag">Claude Code</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ KOMPETENZEN ============================ -->
-<section class="section" id="kompetenzen">
+<section class="section section--sunk" id="kompetenzen">
   <div class="wrap">
     <div class="section__head reveal">
       <div class="section__kicker">Kompetenzen</div>
@@ -892,14 +1063,21 @@ strong{font-weight:600;color:var(--ink)}
         </div>
 
         <div class="skillgroup">
-          <h4>Werkzeuge &amp; Umfeld</h4>
+          <h4>Werkzeuge</h4>
           <div class="pills">
             <span class="pill">Jira</span>
             <span class="pill">Confluence</span>
             <span class="pill">Atlassian-Toolchain</span>
+            <span class="pill">Miro</span>
+            <span class="pill">Figma</span>
+            <span class="pill">BPMN</span>
+            <span class="pill">Postman</span>
+            <span class="pill">Bruno</span>
+            <span class="pill">REST-APIs</span>
+            <span class="pill">Kibana</span>
+            <span class="pill">Git</span>
+            <span class="pill">Claude Code</span>
             <span class="pill">AWS (Projektkontext)</span>
-            <span class="pill">AI-Tools in der Business Analyse</span>
-            <span class="pill">Regulierte Entwicklungsumgebungen</span>
           </div>
         </div>
       </div>

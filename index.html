@@ -85,6 +85,10 @@ strong{font-weight:600;color:var(--ink)}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 @media (max-width:640px){.wrap{padding:0 20px}}
 
+/* Ankersprünge unterhalb der klebenden Navigation ausrichten, sonst
+   verschwindet die Oberkante der Sektion hinter der Leiste. */
+main > section[id], main > header[id]{scroll-margin-top:62px}
+
 .skip{position:absolute;left:-9999px;top:0}
 .skip:focus{left:8px;top:8px;z-index:99;background:var(--bg-elev);padding:10px 14px;border-radius:8px;box-shadow:var(--shadow)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}

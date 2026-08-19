@@ -23,7 +23,7 @@ Mischung aus beiden Lebensläufen:
 | KPI-Systeme, Vorgehensmodelle, AI-Enablement | „Prozesse dort aufbauen, wo keine bestanden" |
 | Vollständige Projektübersicht (10 Projekte) | Bosch-Details, Bachelorarbeit-Bezug |
 
-Sektionen: Profil · Schwerpunkte · Werdegang · Projekte (filterbar) · Kompetenzen · Kontakt.
+Sektionen: Profil · Ansatz · Schwerpunkte · Werdegang · Projekte (filterbar) · Kompetenzen · Kontakt.
 Dark Mode richtet sich automatisch nach der Systemeinstellung. Ein Druck-Stylesheet ist hinterlegt:
 Wer die Seite über Strg+P ausgibt, bekommt ein sauberes Dokument ohne Navigation und Filter — ein
 eigener Button dafür ist bewusst nicht vorhanden.

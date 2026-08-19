@@ -292,23 +292,6 @@ strong{font-weight:600;color:var(--ink)}
 }
 
 /* ============================================================
-   Eigene Projekte
-   ============================================================ */
-.builds{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-@media (max-width:820px){.builds{grid-template-columns:1fr}}
-.build{
-  background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);
-  padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;
-}
-.build__kind{
-  font-size:.6875rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--accent-ink);
-}
-.build h3{margin-top:10px;font-size:1.0625rem;font-weight:600;line-height:1.35}
-.build p{margin-top:11px;font-size:.9062rem;color:var(--ink-2)}
-.build__stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:18px}
-
-/* ============================================================
    Timeline
    ============================================================ */
 .tl{position:relative}
@@ -481,7 +464,6 @@ strong{font-weight:600;color:var(--ink)}
       <a href="#schwerpunkte">Schwerpunkte</a>
       <a href="#werdegang">Werdegang</a>
       <a href="#projekte">Projekte</a>
-      <a href="#eigenes">Eigenes</a>
       <a href="#kompetenzen">Kompetenzen</a>
       <a href="#kontakt">Kontakt</a>
     </div>
@@ -972,50 +954,8 @@ strong{font-weight:600;color:var(--ink)}
   </div>
 </section>
 
-<!-- ============================ EIGENES ============================ -->
-<section class="section" id="eigenes">
-  <div class="wrap">
-    <div class="section__head reveal">
-      <div class="section__kicker">Selbst gebaut</div>
-      <h2 class="section__title">Was ich außerhalb der Projekte baue</h2>
-      <p class="section__sub">
-        Analyse hört für mich nicht bei der Spezifikation auf. Wo ein Werkzeug fehlt, baue ich es —
-        das schärft das Verständnis dafür, was Umsetzung tatsächlich kostet.
-      </p>
-    </div>
-
-    <div class="builds">
-      <article class="build reveal">
-        <div class="build__kind">Internes Tool · MHP</div>
-        <h3>Retrospektiven-Tool</h3>
-        <p>
-          Eigenentwicklung zur Durchführung von Retrospektiven, entstanden aus der Arbeit als Scrum
-          Master: Die verfügbaren Werkzeuge passten nicht zum Ablauf, den die Teams tatsächlich
-          brauchten.
-        </p>
-        <div class="build__stack"></div>
-      </article>
-
-      <article class="build reveal">
-        <div class="build__kind">Diese Seite</div>
-        <h3>filipstanicak.github.io</h3>
-        <p>
-          Eine einzelne HTML-Datei ohne Framework und ohne Build-Schritt, rund 55 KB, auf GitHub
-          Pages gehostet. Dark Mode, responsives Layout und die Projektfilter laufen über CSS und
-          etwa 60 Zeilen JavaScript.
-        </p>
-        <div class="build__stack">
-          <span class="tag">HTML &amp; CSS</span><span class="tag">Vanilla JS</span>
-          <span class="tag">Git</span><span class="tag">GitHub Pages</span>
-          <span class="tag">Claude Code</span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ============================ KOMPETENZEN ============================ -->
-<section class="section section--sunk" id="kompetenzen">
+<section class="section" id="kompetenzen">
   <div class="wrap">
     <div class="section__head reveal">
       <div class="section__kicker">Kompetenzen</div>

@@ -40,6 +40,8 @@
   --shadow:0 1px 2px rgba(20,24,29,.05), 0 8px 24px -12px rgba(20,24,29,.12);
   --radius:14px;
   --maxw:1080px;
+  --nav-inner:62px;          /* Innenhöhe der Navigationsleiste */
+  --nav-h:63px;              /* dieselbe plus 1px Rahmen = tatsächliche Bauhöhe */
   --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --serif:'Newsreader', Georgia, 'Times New Roman', serif;
 }
@@ -87,7 +89,7 @@ strong{font-weight:600;color:var(--ink)}
 
 /* Ankersprünge unterhalb der klebenden Navigation ausrichten, sonst
    verschwindet die Oberkante der Sektion hinter der Leiste. */
-main > section[id], main > header[id]{scroll-margin-top:62px}
+main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
 
 .skip{position:absolute;left:-9999px;top:0}
 .skip:focus{left:8px;top:8px;z-index:99;background:var(--bg-elev);padding:10px 14px;border-radius:8px;box-shadow:var(--shadow)}
@@ -106,7 +108,7 @@ main > section[id], main > header[id]{scroll-margin-top:62px}
   transition:border-color .25s ease;
 }
 .nav.is-stuck{border-bottom-color:var(--line)}
-.nav__inner{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:62px;display:flex;align-items:center;gap:28px}
+.nav__inner{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:var(--nav-inner);display:flex;align-items:center;gap:28px}
 .nav__brand{
   display:flex;align-items:center;gap:11px;
   font-family:var(--serif);font-size:1.0625rem;letter-spacing:.01em;white-space:nowrap;
@@ -1151,7 +1153,7 @@ main > section[id], main > header[id]{scroll-margin-top:62px}
           a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id ? 'true' : 'false');
         });
       });
-    }, { rootMargin: '-62px 0px -70% 0px', threshold: 0 });
+    }, { rootMargin: '-63px 0px -70% 0px', threshold: 0 });
     sections.forEach(function (s) { spy.observe(s); });
   }
 

@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filip Stanicak — Senior Consultant | Business Analyse &amp; Agile Delivery</title>
+<meta name="description" content="Senior Consultant mit rund sieben Jahren Erfahrung in Automotive und Financial Services: Requirements Engineering, Vorgehensmodelle, Test- und Releasemanagement sowie agile Teamsteuerung.">
+<meta name="author" content="Filip Stanicak">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://filipstanicak.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Filip Stanicak — Senior Consultant">
+<meta property="og:description" content="Requirements Engineering, Vorgehensmodelle, Test- und Releasemanagement, agile Teamsteuerung. Automotive &amp; Financial Services.">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://filipstanicak.github.io/assets/portrait.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2314181d'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23e0b48f' text-anchor='middle'%3EFS%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   Tokens
+   ============================================================ */
+:root{
+  --bg:#fbfaf8;
+  --bg-elev:#ffffff;
+  --bg-sunk:#f4f2ee;
+  --ink:#14181d;
+  --ink-2:#454d57;
+  --ink-3:#6f7883;
+  --line:#e4e1da;
+  --line-strong:#d2cec5;
+  --accent:#a2542c;
+  --accent-ink:#8c4623;
+  --accent-soft:#f5ece5;
+  --shadow:0 1px 2px rgba(20,24,29,.05), 0 8px 24px -12px rgba(20,24,29,.12);
+  --radius:14px;
+  --maxw:1080px;
+  --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --serif:'Newsreader', Georgia, 'Times New Roman', serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0d1013;
+    --bg-elev:#14181d;
+    --bg-sunk:#11151a;
+    --ink:#eef1f4;
+    --ink-2:#b4bcc5;
+    --ink-3:#868f99;
+    --line:#252c33;
+    --line-strong:#333c45;
+    --accent:#dd8f5e;
+    --accent-ink:#e9a678;
+    --accent-soft:#1d1b19;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 28px -14px rgba(0,0,0,.6);
+  }
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+h1,h2,h3,h4{margin:0;line-height:1.2;letter-spacing:-.015em;font-weight:600}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+strong{font-weight:600;color:var(--ink)}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+@media (max-width:640px){.wrap{padding:0 20px}}
+
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:8px;top:8px;z-index:99;background:var(--bg-elev);padding:10px 14px;border-radius:8px;box-shadow:var(--shadow)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:var(--bg); /* Fallback, falls color-mix nicht unterstützt wird */
+  background:color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter:saturate(1.6) blur(14px);
+  -webkit-backdrop-filter:saturate(1.6) blur(14px);
+  border-bottom:1px solid transparent;
+  transition:border-color .25s ease;
+}
+.nav.is-stuck{border-bottom-color:var(--line)}
+.nav__inner{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:62px;display:flex;align-items:center;gap:28px}
+.nav__brand{
+  display:flex;align-items:center;gap:11px;
+  font-family:var(--serif);font-size:1.0625rem;letter-spacing:.01em;white-space:nowrap;
+}
+.nav__brand span{color:var(--ink-3)}
+.nav__avatar{
+  width:29px;height:29px;flex:none;border-radius:50%;object-fit:cover;
+  border:1px solid var(--line-strong);
+  box-shadow:0 1px 3px rgba(20,24,29,.14);
+}
+.nav__links{display:flex;gap:26px;margin-left:auto;align-items:center}
+.nav__links a{
+  font-size:.8125rem;font-weight:500;color:var(--ink-3);
+  padding:4px 0;position:relative;transition:color .18s ease;
+}
+.nav__links a::after{
+  content:"";position:absolute;left:0;right:0;bottom:-2px;height:1.5px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .2s ease;
+}
+.nav__links a:hover{color:var(--ink)}
+.nav__links a[aria-current="true"]{color:var(--ink)}
+.nav__links a[aria-current="true"]::after{transform:scaleX(1)}
+@media (max-width:860px){
+  .nav__inner{padding:0 20px;gap:14px}
+  .nav__links{gap:16px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;mask-image:linear-gradient(to right,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%)}
+  .nav__links::-webkit-scrollbar{display:none}
+  .nav__links a{white-space:nowrap}
+}
+@media (max-width:520px){.nav__brand{display:none}}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero{padding:76px 0 64px;border-bottom:1px solid var(--line)}
+@media (max-width:700px){.hero{padding:48px 0 44px}}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) 296px;gap:64px;align-items:start}
+@media (max-width:980px){.hero__grid{grid-template-columns:minmax(0,1fr) 240px;gap:44px}}
+
+/* Porträt */
+.portrait{position:relative;margin:8px 0 0}
+.portrait picture{position:relative;display:block}
+.portrait picture::after{
+  content:"";position:absolute;inset:0;
+  transform:translate(15px,15px);
+  border:1px solid var(--accent);border-radius:16px;
+  opacity:.4;pointer-events:none;z-index:0;
+}
+.portrait img{
+  position:relative;z-index:1;display:block;
+  width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;
+  border-radius:16px;border:1px solid var(--line-strong);
+  background:var(--bg-sunk);
+  box-shadow:0 2px 6px rgba(20,24,29,.06), 0 18px 40px -22px rgba(20,24,29,.28);
+}
+@media (prefers-color-scheme: dark){
+  .portrait img{border-color:#3d3a35;box-shadow:0 2px 6px rgba(0,0,0,.5), 0 20px 44px -24px rgba(0,0,0,.8)}
+}
+.portrait__cap{
+  position:relative;z-index:1;
+  margin-top:18px;padding-left:14px;border-left:2px solid var(--accent);
+  font-size:.8125rem;line-height:1.5;color:var(--ink-3);
+}
+.portrait__cap b{display:block;font-weight:600;color:var(--ink-2);font-size:.8438rem}
+
+/* Auf schmalen Viewports: rundes Avatar über dem Text */
+@media screen and (max-width:820px){
+  .hero__grid{grid-template-columns:1fr;gap:24px}
+  .portrait{order:-1;width:104px;margin-top:0}
+  .portrait picture::after{display:none}
+  .portrait img{aspect-ratio:1;border-radius:50%;box-shadow:0 8px 22px -14px rgba(20,24,29,.5)}
+  .portrait__cap{display:none}
+}
+.hero__eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent-ink);margin-bottom:22px;
+}
+.hero__eyebrow::before{content:"";width:22px;height:1.5px;background:var(--accent)}
+.hero__name{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(2.75rem,7vw,4.5rem);line-height:1.02;letter-spacing:-.02em;
+}
+.hero__role{
+  margin-top:14px;font-size:clamp(1.0625rem,2.2vw,1.3125rem);font-weight:500;color:var(--ink-2);
+}
+.hero__role em{font-family:var(--serif);font-style:italic;color:var(--accent-ink);font-weight:400}
+.hero__lead{
+  margin-top:26px;max-width:64ch;font-size:1.0625rem;color:var(--ink-2);
+}
+.hero__lead + .hero__lead{margin-top:14px}
+
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 18px;border-radius:999px;
+  font-size:.875rem;font-weight:500;
+  border:1px solid var(--line-strong);background:var(--bg-elev);color:var(--ink);
+  transition:transform .16s ease, border-color .16s ease, background .16s ease;
+  cursor:pointer;font-family:inherit;
+}
+.btn:hover{transform:translateY(-1px);border-color:var(--ink-3)}
+.btn--primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn--primary:hover{border-color:var(--ink)}
+.btn svg{width:15px;height:15px;flex:none}
+
+/* Facts */
+.facts{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  margin-top:56px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+}
+.fact{background:var(--bg-elev);padding:20px 22px}
+.fact__n{font-family:var(--serif);font-size:1.875rem;line-height:1;color:var(--accent-ink)}
+.fact__l{margin-top:8px;font-size:.8125rem;color:var(--ink-3);line-height:1.45}
+@media (max-width:760px){.facts{grid-template-columns:1fr;margin-top:38px}}
+@media (max-width:480px){.fact{padding:17px 18px}.fact__n{font-size:1.625rem}}
+
+/* ============================================================
+   Sections
+   ============================================================ */
+.section{padding:78px 0;border-bottom:1px solid var(--line)}
+.section--sunk{background:var(--bg-sunk)}
+@media (max-width:700px){.section{padding:54px 0}}
+.section__head{margin-bottom:38px}
+.section__kicker{
+  font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);
+}
+.section__title{margin-top:10px;font-size:clamp(1.5rem,3.4vw,2rem);font-weight:600}
+.section__sub{margin-top:12px;max-width:62ch;color:var(--ink-2);font-size:.9688rem}
+
+/* ============================================================
+   Schwerpunkte
+   ============================================================ */
+.focus{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:900px){.focus{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.focus{grid-template-columns:1fr}}
+.focus__card{
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow);
+}
+.focus__ico{
+  width:34px;height:34px;border-radius:9px;background:var(--accent-soft);
+  display:grid;place-items:center;color:var(--accent-ink);margin-bottom:16px;
+}
+.focus__ico svg{width:18px;height:18px}
+.focus__card h3{font-size:1rem;font-weight:600}
+.focus__card p{margin-top:9px;font-size:.9062rem;color:var(--ink-2)}
+
+/* ============================================================
+   Timeline
+   ============================================================ */
+.tl{position:relative}
+.tl__item{
+  display:grid;grid-template-columns:170px 1fr;gap:34px;
+  padding:30px 0;border-top:1px solid var(--line);
+}
+.tl__item:first-child{border-top:0;padding-top:0}
+@media (max-width:760px){
+  .tl__item{grid-template-columns:1fr;gap:12px}
+}
+.tl__when{font-size:.875rem;color:var(--ink-3);font-variant-numeric:tabular-nums;padding-top:3px}
+.tl__now{
+  display:inline-flex;align-items:center;gap:6px;margin-top:8px;
+  font-size:.75rem;font-weight:500;color:var(--accent-ink);
+}
+.tl__dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.tl__role{font-size:1.1875rem;font-weight:600}
+.tl__org{margin-top:5px;font-size:.9375rem;color:var(--ink-2)}
+.tl__org b{font-weight:600;color:var(--ink)}
+.tl__ctx{margin-top:14px;font-size:.9375rem;color:var(--ink-2);max-width:62ch}
+.bullets{margin-top:16px;display:grid;gap:9px;max-width:66ch}
+.bullets li{position:relative;padding-left:20px;font-size:.9375rem;color:var(--ink-2)}
+.bullets li::before{
+  content:"";position:absolute;left:2px;top:.62em;
+  width:6px;height:1.5px;background:var(--accent);
+}
+
+/* ============================================================
+   Projekte
+   ============================================================ */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{
+  font-family:inherit;font-size:.8125rem;font-weight:500;
+  padding:7px 14px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line-strong);background:transparent;color:var(--ink-2);
+  transition:background .16s ease,color .16s ease,border-color .16s ease;
+}
+.chip:hover{border-color:var(--ink-3);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media (max-width:820px){.projects{grid-template-columns:1fr}}
+.project{
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.project[hidden]{display:none}
+.project__meta{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+  font-size:.75rem;color:var(--ink-3);letter-spacing:.02em;
+}
+.project__client{font-weight:600;color:var(--accent-ink);letter-spacing:.04em;text-transform:uppercase}
+.project__sep{color:var(--line-strong)}
+.project h3{margin-top:12px;font-size:1.0625rem;font-weight:600;line-height:1.35}
+.project__role{margin-top:8px;font-size:.8438rem;color:var(--ink-3)}
+.project__ctx{margin-top:14px;font-size:.9062rem;color:var(--ink-2)}
+.project .bullets{margin-top:14px;max-width:none}
+.project .bullets li{font-size:.9062rem}
+.project__tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:20px}
+.tag{
+  font-size:.6875rem;font-weight:500;letter-spacing:.03em;
+  padding:4px 9px;border-radius:5px;background:var(--bg-sunk);color:var(--ink-3);
+  border:1px solid var(--line);
+}
+@media (prefers-color-scheme: dark){.tag{background:#1b2026}}
+
+/* ============================================================
+   Kompetenzen / Zertifikate
+   ============================================================ */
+.cols{display:grid;grid-template-columns:1.35fr 1fr;gap:56px}
+@media (max-width:820px){.cols{grid-template-columns:1fr;gap:44px}}
+.skillgroup + .skillgroup{margin-top:26px}
+.skillgroup h4{
+  font-size:.75rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);
+  margin-bottom:12px;
+}
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pill{
+  font-size:.8438rem;padding:6px 13px;border-radius:8px;
+  background:var(--bg-elev);border:1px solid var(--line);color:var(--ink-2);
+}
+.certs{display:grid;gap:10px}
+.cert{
+  display:flex;align-items:center;gap:14px;
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:11px;padding:14px 16px;
+}
+.cert__badge{
+  width:36px;height:36px;flex:none;border-radius:9px;
+  background:var(--accent-soft);color:var(--accent-ink);
+  display:grid;place-items:center;font-size:.6875rem;font-weight:700;letter-spacing:.02em;
+}
+.cert__name{font-size:.9375rem;font-weight:500}
+.cert__year{font-size:.8125rem;color:var(--ink-3);margin-left:auto;font-variant-numeric:tabular-nums}
+.langs{display:grid;gap:12px;margin-top:6px}
+.lang{display:flex;align-items:center;gap:14px;font-size:.9375rem}
+.lang__name{min-width:78px;font-weight:500}
+.lang__bar{flex:1;height:4px;border-radius:99px;background:var(--line);overflow:hidden}
+.lang__fill{display:block;height:100%;border-radius:99px;background:var(--accent)}
+.lang__lvl{font-size:.8125rem;color:var(--ink-3);min-width:26px;text-align:right}
+
+/* ============================================================
+   Kontakt
+   ============================================================ */
+.contact{padding:82px 0}
+.contact__grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+@media (max-width:760px){.contact__grid{grid-template-columns:1fr;align-items:start}}
+.contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.75rem,4.5vw,2.75rem);line-height:1.1}
+.contact p{margin-top:16px;max-width:48ch;color:var(--ink-2)}
+.contact__list{display:grid;gap:14px}
+.contact__row{display:flex;align-items:center;gap:12px;font-size:.9375rem}
+.contact__row svg{width:16px;height:16px;color:var(--ink-3);flex:none}
+.contact__row a{border-bottom:1px solid var(--line-strong);padding-bottom:1px;transition:border-color .16s ease}
+.contact__row a:hover{border-color:var(--accent)}
+
+.footer{
+  border-top:1px solid var(--line);padding:26px 0;
+  font-size:.8125rem;color:var(--ink-3);
+}
+.footer__inner{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+
+/* ============================================================
+   Reveal on scroll
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.6,.2,1), transform .6s cubic-bezier(.2,.6,.2,1)}
+.reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ============================================================
+   Print
+   ============================================================ */
+@media print{
+  :root{
+    --bg:#fff;--bg-elev:#fff;--bg-sunk:#fff;--ink:#000;--ink-2:#222;--ink-3:#555;
+    --line:#ccc;--line-strong:#bbb;--accent:#000;--accent-ink:#000;--accent-soft:#f0f0f0;--shadow:none;
+  }
+  body{font-size:10.5pt;line-height:1.45}
+  .nav,.actions,.filters,.footer,.hero__eyebrow::before{display:none !important}
+  .hero__grid{grid-template-columns:1fr 30mm !important;gap:10mm !important}
+  .portrait{margin:0 !important}
+  .portrait picture::after{display:none !important}
+  .portrait img{aspect-ratio:3/4 !important;border-radius:2mm !important;box-shadow:none !important}
+  .portrait__cap{display:none !important}
+  .section,.hero,.contact{padding:16pt 0;border-bottom:none;break-inside:avoid}
+  .hero{padding-top:0}
+  .facts{margin-top:14pt}
+  .project,.focus__card,.cert,.pill{box-shadow:none;break-inside:avoid}
+  .projects,.focus{grid-template-columns:1fr 1fr;gap:10pt}
+  .project[hidden]{display:flex !important}
+  .section__head{margin-bottom:14pt}
+  .reveal{opacity:1 !important;transform:none !important}
+  a{text-decoration:none}
+  @page{margin:14mm}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#profil">
+      <img class="nav__avatar" src="assets/avatar.jpg" alt="" width="180" height="180" decoding="async">
+      Filip Stanicak <span>· Senior Consultant</span>
+    </a>
+    <div class="nav__links">
+      <a href="#profil">Profil</a>
+      <a href="#schwerpunkte">Schwerpunkte</a>
+      <a href="#werdegang">Werdegang</a>
+      <a href="#projekte">Projekte</a>
+      <a href="#kompetenzen">Kompetenzen</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ============================ HERO ============================ -->
+<header class="hero" id="profil">
+  <div class="wrap">
+   <div class="hero__grid">
+    <div>
+    <div class="hero__eyebrow">Automotive &amp; Financial Services</div>
+    <h1 class="hero__name">Filip Stanicak</h1>
+    <p class="hero__role">Senior Consultant — <em>Business Analyse, Prozessdesign &amp; Agile Delivery</em></p>
+
+    <p class="hero__lead">
+      Rund sieben Jahre Erfahrung an der Schnittstelle von Anforderungsmanagement, Prozess- und
+      Methodenarbeit sowie agiler Delivery — von Steuergerätefunktionen über digitale Kundenservices
+      bis zu Applikations- und Kalibrierungsprozessen.
+    </p>
+    <p class="hero__lead">
+      Ich verantworte Themen von der fachlichen Analyse über die Einführung von Vorgehensmodellen,
+      Test- und Releasemanagement bis zur Steuerung agiler Teams. Erfahren in skalierten und
+      regulierten Entwicklungsumgebungen, in der fachlichen Führung kleiner Beratungsteams und darin,
+      Prozesse dort aufzubauen, wo bisher keine bestanden. Zusätzlicher Schwerpunkt: der Einsatz von
+      AI in Business Analyse und Beratung.
+    </p>
+
+    <div class="actions">
+      <a class="btn btn--primary" href="mailto:stanicakfilip@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        Kontakt aufnehmen
+      </a>
+      <a class="btn" href="https://www.linkedin.com/in/filip-stanicak/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM2.4 21h5.16V9.5H2.4V21zM10.2 9.5V21h5.16v-6.2c0-2.02.7-3.1 2.3-3.1 1.42 0 2.02.9 2.02 3.1V21h5.16v-6.9c0-3.6-1.9-5.3-4.6-5.3-2.18 0-3.4 1.2-3.98 2.2h-.06V9.5H10.2z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+    </div><!-- /Textspalte -->
+
+    <figure class="portrait">
+      <picture>
+        <source media="screen and (max-width: 820px)" srcset="assets/avatar.jpg">
+        <source srcset="assets/portrait@1x.jpg 350w, assets/portrait.jpg 700w" sizes="296px">
+        <img src="assets/portrait.jpg" alt="Porträtfoto von Filip Stanicak"
+             width="700" height="933" decoding="async">
+      </picture>
+      <figcaption class="portrait__cap">
+        <b>Filip Stanicak</b>
+        Senior Consultant bei MHP<br>(A Porsche Company), Ludwigsburg
+      </figcaption>
+    </figure>
+   </div><!-- /hero__grid -->
+
+    <div class="facts">
+      <div class="fact"><div class="fact__n">7 Jahre</div><div class="fact__l">Berufserfahrung in Automotive und Financial Services</div></div>
+      <div class="fact"><div class="fact__n">10 Projekte</div><div class="fact__l">bei Automobilherstellern, Zulieferern und einem Finanzdienstleister</div></div>
+      <div class="fact"><div class="fact__n">3 Rollen</div><div class="fact__l">Business Analyst, Scrum Master und Lead Consultant</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ SCHWERPUNKTE ============================ -->
+<section class="section section--sunk" id="schwerpunkte">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div class="section__kicker">Fachliche Schwerpunkte</div>
+      <h2 class="section__title">Wofür man mich holt</h2>
+      <p class="section__sub">
+        Sechs Themen, die sich über alle Projekte hinweg wiederholen — meist dort, wo eine Funktion
+        oder ein Prozess noch nicht existiert.
+      </p>
+    </div>
+
+    <div class="focus">
+      <article class="focus__card reveal">
+        <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+        <h3>Requirements Engineering &amp; Business Analyse</h3>
+        <p>Fachliche Analyse und Spezifikation in internationalen Systemlandschaften — von der Kunden-App bis zum Steuergerät.</p>
+      </article>
+
+      <article class="focus__card reveal">
+        <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+        <h3>Agile Delivery, Scrum &amp; SAFe</h3>
+        <p>Scrum Master für bis zu fünf Teams parallel, Zeremonien und Steuerung in skalierten Setups bis zum Agile Release Train.</p>
+      </article>
+
+      <article class="focus__card reveal">
+        <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+        <h3>Test- und Releasemanagement</h3>
+        <p>Aufbau von Testmanagement und Releaseprozessen in Umgebungen ohne bestehende Struktur, inklusive Cross-Team-Etablierung.</p>
+      </article>
+
+      <article class="focus__card reveal">
+        <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4a3 3 0 0 1 3 3V14M6.5 10v4a3 3 0 0 0 3 3H14"/></svg></div>
+        <h3>Vorgehensmodelle &amp; Prozessdesign</h3>
+        <p>Rollen, Artefakte und Entscheidungswege — etwa als Kombination aus SAFe und Systems Engineering nach einer Organisationsfusion.</p>
+      </article>
+
+      <article class="focus__card reveal">
+        <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20V8"/></svg></div>
+        <h3>KPI-Systeme &amp; Steuerungsgrößen</h3>
+        <p>Messbare Schätzgenauigkeit, Kostentransparenz und Partnerstrategien — Grundlage für Entscheidungen statt Bauchgefühl.</p>
+      </article>
+
+      <article class="focus__card reveal">
+        <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M3 12h3M18 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <h3>AI-Enablement in der Beratung</h3>
+        <p>Aufbau der AI-Themen in der Business-Analyse-Community, Tool-Piloten mit unternehmensweitem Rollout, eigene Tool-Entwicklung.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WERDEGANG ============================ -->
+<section class="section" id="werdegang">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div class="section__kicker">Beruflicher Werdegang</div>
+      <h2 class="section__title">Stationen</h2>
+    </div>
+
+    <div class="tl">
+      <article class="tl__item reveal">
+        <div class="tl__when">
+          01/2024 – heute
+          <div class="tl__now"><span class="tl__dot"></span>aktuell</div>
+        </div>
+        <div>
+          <h3 class="tl__role">Senior Consultant</h3>
+          <p class="tl__org"><b>MHP (A Porsche Company)</b>, Ludwigsburg</p>
+          <p class="tl__ctx">
+            Sechs Projekte bei einem Premium-OEM, einem Automotive-Softwareunternehmen, einem
+            Nutzfahrzeughersteller und einem Finanzdienstleister.
+          </p>
+          <ul class="bullets">
+            <li>Fachliche Leitung eines dreiköpfigen Beratungsteams bei der Entwicklung eines Vorgehensmodells aus SAFe und Systems Engineering für eine fusionierte Software-/Hardware-Organisation mit über 1.000 Mitarbeitenden</li>
+            <li>Aufbau eines Testmanagements inklusive des ersten teamübergreifenden Cross-Teams für eine zuvor nicht etablierte Funktion</li>
+            <li>Scrum Master für bis zu fünf Entwicklungsteams parallel sowie Einführung eines Releasemanagements in einer Umgebung ohne bestehenden Prozess</li>
+            <li>Entwicklung eines KPI-Systems zur Messung von Schätzgenauigkeit und monatlichen Kosten eines Agile Release Trains mit rund 25 Beteiligten — dadurch wurden systematische Fehlschätzungen eines Kernteams sichtbar</li>
+            <li>Evaluation von über 60 Partnern und Zulieferern sowie Erarbeitung einer Konsolidierungsstrategie über Rahmenverträge bei gleichzeitiger Begrenzung von Abhängigkeiten</li>
+            <li>End-to-End-Test und fachliche Verantwortung für Fahrzeugfunktionen über die gesamte Kette von der Kunden-App bis zum Steuergerät</li>
+            <li>Konzeption einer Single Source of Truth auf Atlassian-Basis für sämtliche Prozess- und Methodenartefakte</li>
+            <li>Intern: Staffing, Aufbau der AI-Themen in der Business-Analyse-Community, Mitwirkung an AI-Tool-Piloten mit anschließendem unternehmensweitem Rollout sowie Eigenentwicklung eines internen Retrospektiven-Tools</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="tl__item reveal">
+        <div class="tl__when">07/2021 – 12/2023</div>
+        <div>
+          <h3 class="tl__role">Business Analyst</h3>
+          <p class="tl__org"><b>Capgemini</b>, Stuttgart</p>
+          <p class="tl__ctx">
+            Digitale Kundenlandschaft eines Premium-OEM sowie Systemharmonisierung bei einem weiteren OEM.
+          </p>
+          <ul class="bullets">
+            <li>Anforderungsanalyse und Spezifikation entlang der digitalen Kundenprozesse — von der Werkstattterminierung über die Fahrzeugkonfiguration bis zum Kaufvertrag</li>
+            <li>Fachliche Verantwortung für regelbasierte SMS-Prozesse (One-Time-Password, Terminbestätigungen, Marketing) über einen internationalen Provider, inklusive Einhaltung länderspezifischer B2C-Regularien in anspruchsvollen Märkten wie den VAE, Südkorea und Thailand</li>
+            <li>Konzeption einer Single Source of Truth über die Systemlandschaft eines weiteren OEM</li>
+            <li>Erstellung und Standardisierung von Templates, Spezifikationen und Analyseartefakten zur Verbesserung von Konsistenz und Nachvollziehbarkeit</li>
+            <li>Erfahrenster Business Analyst im Team zum Projektende, fachliches Mentoring eines Junior Business Analysts; Beförderung innerhalb von zwei Jahren</li>
+            <li>Unterstützung von Angebotsphasen und Pre-Sales durch Anforderungsanalysen und Strukturierung von Lösungsansätzen</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="tl__item reveal">
+        <div class="tl__when">08/2019 – 02/2021</div>
+        <div>
+          <h3 class="tl__role">Werkstudent, Praktikant &amp; Abschlussarbeit</h3>
+          <p class="tl__org"><b>Bosch Engineering</b>, Abstatt</p>
+          <ul class="bullets">
+            <li>Anforderungsmanagement und Konzeption einer Webanwendung im Kalibrierungsumfeld als Ablösung einer bestehenden Excel- und Makrolösung</li>
+            <li>Fachliche Führung eines Entwicklungsteams in Indien für die Umsetzung</li>
+            <li>Mitarbeit an einer Teststrategie für Software im Kontext der Fahrzeugabgasmessung</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="tl__item reveal">
+        <div class="tl__when">03/2017 – 02/2021</div>
+        <div>
+          <h3 class="tl__role">Medien- und Kommunikationsinformatik</h3>
+          <p class="tl__org"><b>Hochschule Reutlingen</b> — Bachelor of Science</p>
+          <p class="tl__ctx">
+            Bachelorarbeit: Konzeptionierung einer Webanwendung für das Calibration Release Programm
+            bei Bosch Engineering.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROJEKTE ============================ -->
+<section class="section section--sunk" id="projekte">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div class="section__kicker">Projektübersicht</div>
+      <h2 class="section__title">Ausgewählte Projekte</h2>
+      <p class="section__sub">
+        Zehn Einsätze bei OEMs, einem Nutzfahrzeughersteller, einem Automotive-Softwareunternehmen und
+        einem Finanzdienstleister. Nach Themenschwerpunkt filterbar.
+      </p>
+    </div>
+
+    <div class="filters reveal" role="group" aria-label="Projekte nach Thema filtern">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">Alle</button>
+      <button class="chip" type="button" data-filter="agile" aria-pressed="false">Agile Delivery</button>
+      <button class="chip" type="button" data-filter="req" aria-pressed="false">Requirements &amp; Analyse</button>
+      <button class="chip" type="button" data-filter="test" aria-pressed="false">Test &amp; Release</button>
+      <button class="chip" type="button" data-filter="prozess" aria-pressed="false">Prozess &amp; Methodik</button>
+      <button class="chip" type="button" data-filter="ai" aria-pressed="false">AI &amp; Enablement</button>
+    </div>
+
+    <div class="projects" id="projectGrid">
+
+      <article class="project reveal" data-tags="agile test req">
+        <div class="project__meta">
+          <span class="project__client">Daimler Trucks</span>
+          <span class="project__sep">·</span><span>MHP</span>
+          <span class="project__sep">·</span><span>seit 01/2026, laufend</span>
+        </div>
+        <h3>Aufbau eines Releasemanagements und agile Teamsteuerung</h3>
+        <p class="project__role">Scrum Master (80 %) und Business Analyst (20 %)</p>
+        <p class="project__ctx">
+          Betreuung von fünf Entwicklungsteams mit insgesamt zehn Mitarbeitenden, von denen viele
+          parallel in mehreren Teams arbeiten. Zuvor existierte kein Releasemanagement: Releases
+          erfolgten im Zwei-Wochen-Takt, flankiert von einer separaten Testing Week eines
+          eigenständigen Testteams.
+        </p>
+        <ul class="bullets">
+          <li>Einführung eines strukturierten Releasemanagements über die betreuten Teams hinweg</li>
+          <li>Moderation und Weiterentwicklung der Scrum-Zeremonien bei stark verflochtenen Teamzugehörigkeiten</li>
+          <li>Fachliche Analyse und Anforderungsarbeit ergänzend zur Scrum-Master-Rolle</li>
+        </ul>
+        <div class="project__tags"><span class="tag">Scrum Master</span><span class="tag">Releasemanagement</span><span class="tag">Nutzfahrzeuge</span></div>
+      </article>
+
+      <article class="project reveal" data-tags="agile prozess">
+        <div class="project__meta">
+          <span class="project__client">Porsche Financial Services</span>
+          <span class="project__sep">·</span><span>MHP</span>
+          <span class="project__sep">·</span><span>12 Monate</span>
+        </div>
+        <h3>KPI-System und agile Steuerung eines Agile Release Trains</h3>
+        <p class="project__role">Scrum Master</p>
+        <p class="project__ctx">
+          Scrum Master des Infrastrukturteams innerhalb eines Agile Release Trains aus drei Teams
+          (Core, Calc, Enablement) sowie einem Managementkreis von rund fünf Personen. Inhaltlicher
+          Schwerpunkt: Aufrechterhaltung der ART-Infrastruktur sowie Vorarbeit zur Zerlegung eines
+          On-Premise-Monolithen in Microservices und deren Betrieb in AWS.
+        </p>
+        <ul class="bullets">
+          <li>Konzeption und Einführung eines KPI-Systems, das geschätzte gegen tatsächlich erbrachte Story Points stellt und die Schätzgenauigkeit je Team messbar macht</li>
+          <li>Ableitung der monatlichen Gesamtkosten des ART aus den erfassten Aufwänden</li>
+          <li>Ergebnis: systematische Unterschätzung im Core-Team wurde transparent und damit adressierbar</li>
+        </ul>
+        <div class="project__tags"><span class="tag">SAFe / ART</span><span class="tag">KPI-System</span><span class="tag">AWS-Migration</span></div>
+      </article>
+
+      <article class="project reveal" data-tags="prozess test">
+        <div class="project__meta">
+          <span class="project__client">CARIAD</span>
+          <span class="project__sep">·</span><span>MHP</span>
+          <span class="project__sep">·</span><span>6 Monate</span>
+        </div>
+        <h3>Vorgehensmodell, Testmanagement und Partnerstrategie nach Organisationsfusion</h3>
+        <p class="project__role">Lead Consultant — fachliche Führung von zwei Consultants</p>
+        <p class="project__ctx">
+          Nach der Fusion einer Software- und einer Hardwareabteilung mit insgesamt über 1.000
+          Mitarbeitenden bestand kein gemeinsames Vorgehensmodell.
+        </p>
+        <ul class="bullets">
+          <li>Entwicklung eines Vorgehensmodells als Kombination aus SAFe und Systems Engineering mit klarer Definition von Rollen, Artefakten und Entscheidungswegen</li>
+          <li>Aufbau eines Testmanagements und Etablierung des ersten Cross-Teams mit sieben Mitarbeitenden für eine zuvor nicht existierende Funktion</li>
+          <li>Evaluation von über 60 Partnern und Zulieferern anhand des jeweiligen Projektvolumens; Konsolidierungsstrategie zur Bündelung kleinerer Vergaben unter Rahmenverträgen bei gleichzeitiger Begrenzung von Abhängigkeiten</li>
+          <li>Vollständige Konzeption einer Single Source of Truth auf Atlassian-Basis für alle Systeme im Verantwortungsbereich des Cross-Teams (Process &amp; Methodology)</li>
+        </ul>
+        <div class="project__tags"><span class="tag">Vorgehensmodell</span><span class="tag">Systems Engineering</span><span class="tag">Lieferantensteuerung</span></div>
+      </article>
+
+      <article class="project reveal" data-tags="test req">
+        <div class="project__meta">
+          <span class="project__client">Porsche AG</span>
+          <span class="project__sep">·</span><span>MHP</span>
+          <span class="project__sep">·</span><span>6 Monate</span>
+        </div>
+        <h3>End-to-End-Test und Fachverantwortung für Fahrzeugfunktionen</h3>
+        <p class="project__role">E2E-Tester und Fachverantwortlicher</p>
+        <p class="project__ctx">
+          Fachliche Verantwortung für die Funktionen Licht und Hupe über alle Porsche-Baureihen,
+          jeweils ausgelöst aus der Kunden-App und ausgeführt im Fahrzeug.
+        </p>
+        <ul class="bullets">
+          <li>Test der gesamten Wirkkette über alle Schnittstellen hinweg, von der Auslösung in der App bis zum Signaleingang im Steuergerät</li>
+          <li>Reproduktion sämtlicher gefundener Fehler sowie deren Analyse und Zuordnung an die zuständigen Entwicklungsteams</li>
+          <li>Verantwortung für Logging und Monitoring im Testumfeld</li>
+        </ul>
+        <div class="project__tags"><span class="tag">E2E-Test</span><span class="tag">Steuergerät</span><span class="tag">Logging &amp; Monitoring</span></div>
+      </article>
+
+      <article class="project reveal" data-tags="req prozess">
+        <div class="project__meta">
+          <span class="project__client">Porsche AG</span>
+          <span class="project__sep">·</span><span>MHP</span>
+          <span class="project__sep">·</span><span>3 Monate</span>
+        </div>
+        <h3>Automatisierung der Lizenzvergabe</h3>
+        <p class="project__role">Business Analyst</p>
+        <p class="project__ctx">
+          Die Vergabe von Softwarelizenzen erfolgte über verteilte E-Mail-Abstimmungen und den
+          manuellen Aufruf mehrerer Portale.
+        </p>
+        <ul class="bullets">
+          <li>Fachliche Konzeption der Anbindung von rund acht Systemen an ein neues zentrales Produkt</li>
+          <li>Überführung des zuvor manuellen, mehrstufigen Prozesses in eine durchgängige Toollösung</li>
+        </ul>
+        <div class="project__tags"><span class="tag">Prozessautomatisierung</span><span class="tag">Systemintegration</span></div>
+      </article>
+
+      <article class="project reveal" data-tags="prozess req">
+        <div class="project__meta">
+          <span class="project__client">Porsche AG</span>
+          <span class="project__sep">·</span><span>MHP</span>
+          <span class="project__sep">·</span><span>3 Monate</span>
+        </div>
+        <h3>Migration der Dokumentationslandschaft PIT auf PASS</h3>
+        <p class="project__role">Business Analyst</p>
+        <p class="project__ctx">
+          Überführung von rund 500 Confluence-Seiten aus einer Altvorlage in eine neue Struktur.
+        </p>
+        <ul class="bullets">
+          <li>Inhaltliche Analyse und Zuordnung sämtlicher Themen ohne verfügbaren Vorkontext</li>
+          <li>Sicherstellung von Konsistenz und Auffindbarkeit in der neuen Dokumentationsstruktur</li>
+        </ul>
+        <div class="project__tags"><span class="tag">Confluence</span><span class="tag">Informationsarchitektur</span></div>
+      </article>
+
+      <article class="project reveal" data-tags="req agile">
+        <div class="project__meta">
+          <span class="project__client">Mercedes-Benz</span>
+          <span class="project__sep">·</span><span>Capgemini</span>
+          <span class="project__sep">·</span><span>24 Monate</span>
+        </div>
+        <h3>CUSMES: digitale Kundenlandschaft</h3>
+        <p class="project__role">Business Analyst</p>
+        <p class="project__ctx">
+          Bereitstellung der gesamten digitalen Kundenstrecke, von der Werkstattterminierung über die
+          Fahrzeugkonfiguration bis zum Kaufvertrag. Das Business-Team umfasste anfangs sieben
+          Personen; die Delivery war nach Scrum organisiert, entsprach im Umfang jedoch einem Agile
+          Release Train.
+        </p>
+        <ul class="bullets">
+          <li>Analyse, Dokumentation und Weiterentwicklung fachlicher und technischer Anforderungen in einer internationalen Systemlandschaft</li>
+          <li>Fachliche Verantwortung für regelbasierte SMS-Prozesse über den Provider Esendex: One-Time-Password, Terminbestätigungen und Marketingnachrichten</li>
+          <li>Erarbeitung und Durchsetzung der regulatorischen Anforderungen an B2C-SMS-Verkehr je Markt zur Vermeidung von Strafzahlungen und Providersperrungen — besondere Anforderungen in den VAE, Südkorea und Thailand</li>
+          <li>Erstellung und Standardisierung von Templates, Spezifikationen und Analyseartefakten</li>
+          <li>Erfahrenster Business Analyst im Team zum Projektende, fachliches Mentoring eines Junior Business Analysts</li>
+        </ul>
+        <div class="project__tags"><span class="tag">Requirements Engineering</span><span class="tag">Regulatorik B2C</span><span class="tag">Internationale Rollouts</span></div>
+      </article>
+
+      <article class="project reveal" data-tags="req prozess">
+        <div class="project__meta">
+          <span class="project__client">Audi</span>
+          <span class="project__sep">·</span><span>Capgemini</span>
+          <span class="project__sep">·</span><span>6 Monate</span>
+        </div>
+        <h3>Single Source of Truth über die Systemlandschaft</h3>
+        <p class="project__role">Business Analyst</p>
+        <ul class="bullets">
+          <li>Konzeption einer übergreifenden Single Source of Truth für sämtliche beteiligten Systeme</li>
+          <li>Abstimmung mit internationalen Stakeholdern zur Harmonisierung bestehender Datenquellen</li>
+        </ul>
+        <div class="project__tags"><span class="tag">Single Source of Truth</span><span class="tag">Stakeholder-Management</span></div>
+      </article>
+
+      <article class="project reveal" data-tags="req test">
+        <div class="project__meta">
+          <span class="project__client">Bosch Engineering</span>
+          <span class="project__sep">·</span><span>08/2019 – 02/2021</span>
+        </div>
+        <h3>Calibration Release Programm: Konzeption einer Webanwendung</h3>
+        <p class="project__role">Werkstudent, Praktikant und Abschlussarbeit</p>
+        <p class="project__ctx">
+          Applikateure und Messtechniker erfassten ihre Fahrergebnisse bis dahin ausschließlich über
+          Excel und Makros.
+        </p>
+        <ul class="bullets">
+          <li>Konzeption einer Webanwendung zur Erfassung der Messergebnisse und zur Führung durch den Bosch-Engineering-Prozess</li>
+          <li>Fachliche Führung eines Entwicklungsteams in Indien für die Implementierung</li>
+          <li>Planung, Priorisierung und Spezifikation technischer Anforderungen, Experteninterviews und Prototyping</li>
+          <li>Mitarbeit an einer Teststrategie für Software im Kontext der Fahrzeugabgasmessung</li>
+        </ul>
+        <div class="project__tags"><span class="tag">Anforderungsmanagement</span><span class="tag">Kalibrierung</span><span class="tag">Offshore-Steuerung</span></div>
+      </article>
+
+      <article class="project reveal" data-tags="ai prozess">
+        <div class="project__meta">
+          <span class="project__client">Interne Themen</span>
+          <span class="project__sep">·</span><span>MHP</span>
+          <span class="project__sep">·</span><span>begleitend zur Projektarbeit</span>
+        </div>
+        <h3>AI-Enablement, Community-Aufbau und Staffing</h3>
+        <ul class="bullets">
+          <li>Aufbau und Vorantreiben der AI-Themen innerhalb der Business-Analyse-Community</li>
+          <li>Teilnahme an Piloten für AI-Tools, die anschließend unternehmensweit eingeführt wurden</li>
+          <li>Eigenentwicklung eines internen Tools zur Durchführung von Retrospektiven</li>
+          <li>Staffing und Besetzung von Projekten</li>
+        </ul>
+        <div class="project__tags"><span class="tag">AI in der Business Analyse</span><span class="tag">Community</span><span class="tag">Tool-Entwicklung</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ KOMPETENZEN ============================ -->
+<section class="section" id="kompetenzen">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div class="section__kicker">Kompetenzen</div>
+      <h2 class="section__title">Methoden, Zertifikate und Sprachen</h2>
+    </div>
+
+    <div class="cols">
+      <div class="reveal">
+        <div class="skillgroup">
+          <h4>Analyse &amp; Anforderungen</h4>
+          <div class="pills">
+            <span class="pill">Requirements Engineering</span>
+            <span class="pill">Business Analyse</span>
+            <span class="pill">Spezifikation &amp; Templates</span>
+            <span class="pill">Single Source of Truth</span>
+            <span class="pill">Prozessanalyse</span>
+            <span class="pill">Prototyping</span>
+            <span class="pill">Experteninterviews</span>
+          </div>
+        </div>
+
+        <div class="skillgroup">
+          <h4>Agile Delivery &amp; Methodik</h4>
+          <div class="pills">
+            <span class="pill">Scrum Master</span>
+            <span class="pill">SAFe / Agile Release Train</span>
+            <span class="pill">Systems Engineering</span>
+            <span class="pill">Vorgehensmodelle</span>
+            <span class="pill">Moderation</span>
+            <span class="pill">KPI-Systeme</span>
+            <span class="pill">Fachliche Führung</span>
+          </div>
+        </div>
+
+        <div class="skillgroup">
+          <h4>Test, Release &amp; Steuerung</h4>
+          <div class="pills">
+            <span class="pill">Testmanagement</span>
+            <span class="pill">End-to-End-Test</span>
+            <span class="pill">Releasemanagement</span>
+            <span class="pill">Teststrategie</span>
+            <span class="pill">Logging &amp; Monitoring</span>
+            <span class="pill">Partner- und Lieferantensteuerung</span>
+          </div>
+        </div>
+
+        <div class="skillgroup">
+          <h4>Werkzeuge &amp; Umfeld</h4>
+          <div class="pills">
+            <span class="pill">Jira</span>
+            <span class="pill">Confluence</span>
+            <span class="pill">Atlassian-Toolchain</span>
+            <span class="pill">AWS (Projektkontext)</span>
+            <span class="pill">AI-Tools in der Business Analyse</span>
+            <span class="pill">Regulierte Entwicklungsumgebungen</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="skillgroup">
+          <h4>Zertifikate</h4>
+          <div class="certs">
+            <div class="cert">
+              <div class="cert__badge">SSM</div>
+              <div class="cert__name">SAFe Scrum Master</div>
+              <div class="cert__year">2024</div>
+            </div>
+            <div class="cert">
+              <div class="cert__badge">SA</div>
+              <div class="cert__name">SAFe Agilist</div>
+              <div class="cert__year">2024</div>
+            </div>
+            <div class="cert">
+              <div class="cert__badge">PSM</div>
+              <div class="cert__name">Professional Scrum Master I</div>
+              <div class="cert__year">2021</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skillgroup">
+          <h4>Sprachen</h4>
+          <div class="langs">
+            <div class="lang">
+              <span class="lang__name">Deutsch</span>
+              <span class="lang__bar"><span class="lang__fill" style="width:100%"></span></span>
+              <span class="lang__lvl">C2</span>
+            </div>
+            <div class="lang">
+              <span class="lang__name">Englisch</span>
+              <span class="lang__bar"><span class="lang__fill" style="width:82%"></span></span>
+              <span class="lang__lvl">C1</span>
+            </div>
+            <div class="lang">
+              <span class="lang__name">Kroatisch</span>
+              <span class="lang__bar"><span class="lang__fill" style="width:30%"></span></span>
+              <span class="lang__lvl">A2</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skillgroup">
+          <h4>Interessen</h4>
+          <div class="pills">
+            <span class="pill">Rennsport</span>
+            <span class="pill">Schach</span>
+            <span class="pill">Padel-Tennis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ KONTAKT ============================ -->
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div class="contact__grid">
+      <div class="reveal">
+        <h2>Lassen Sie uns sprechen.</h2>
+        <p>
+          Offen für Gespräche zu Rollen in Business Analyse, Prozess- und Methodenarbeit sowie agiler
+          Delivery — in der Beratung wie in der Industrie.
+        </p>
+      </div>
+      <div class="contact__list reveal">
+        <div class="contact__row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          <a href="mailto:stanicakfilip@gmail.com">stanicakfilip@gmail.com</a>
+        </div>
+        <div class="contact__row">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM2.4 21h5.16V9.5H2.4V21zM10.2 9.5V21h5.16v-6.2c0-2.02.7-3.1 2.3-3.1 1.42 0 2.02.9 2.02 3.1V21h5.16v-6.9c0-3.6-1.9-5.3-4.6-5.3-2.18 0-3.4 1.2-3.98 2.2h-.06V9.5H10.2z"/></svg>
+          <a href="https://www.linkedin.com/in/filip-stanicak/" target="_blank" rel="noopener">linkedin.com/in/filip-stanicak</a>
+        </div>
+        <div class="contact__row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <span>Region Stuttgart</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <span>© <span id="year">2026</span> Filip Stanicak</span>
+    <span><a href="#profil">Nach oben ↑</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---- Jahr im Footer ---- */
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* ---- Nav: Schatten/Linie beim Scrollen ---- */
+  var nav = document.getElementById('nav');
+  var onScroll = function () {
+    if (window.scrollY > 8) nav.classList.add('is-stuck');
+    else nav.classList.remove('is-stuck');
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ---- Scroll-Spy für die Navigation ---- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav__links a'));
+  var sections = links
+    .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) {
+          a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id ? 'true' : 'false');
+        });
+      });
+    }, { rootMargin: '-62px 0px -70% 0px', threshold: 0 });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---- Reveal beim Scrollen ---- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (e, i) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        setTimeout(function () { el.classList.add('is-in'); }, Math.min(i * 60, 240));
+        obs.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    Array.prototype.forEach.call(revealEls, function (el) { io.observe(el); });
+  } else {
+    Array.prototype.forEach.call(revealEls, function (el) { el.classList.add('is-in'); });
+  }
+
+  /* ---- Projektfilter ---- */
+  var chips = document.querySelectorAll('.chip');
+  var cards = document.querySelectorAll('#projectGrid .project');
+
+  Array.prototype.forEach.call(chips, function (chip) {
+    chip.addEventListener('click', function () {
+      var filter = chip.getAttribute('data-filter');
+
+      Array.prototype.forEach.call(chips, function (c) {
+        c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+      });
+
+      Array.prototype.forEach.call(cards, function (card) {
+        var tags = (card.getAttribute('data-tags') || '').split(/\s+/);
+        var show = filter === 'all' || tags.indexOf(filter) !== -1;
+        if (show) {
+          card.removeAttribute('hidden');
+          card.classList.add('is-in');
+        } else {
+          card.setAttribute('hidden', '');
+        }
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

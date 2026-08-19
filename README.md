@@ -50,6 +50,14 @@ ersetzen. Das Porträt muss 3:4 sein (Hochformat), das Avatar quadratisch mit et
 eigene Domain beide Zeilen (10 und 16) anpassen — das `og:image` muss absolut bleiben, sonst zeigen
 LinkedIn und WhatsApp beim Teilen kein Vorschaubild.
 
+**Kundennamen sind anonymisiert.** Die Seite ist auf `index, follow` gestellt und damit dauerhaft
+auffindbar; namentlich genannte Kunden waeren fuer die meisten Beratungen ein Problem. Auf der
+Website stehen daher nur Umschreibungen — „Premium-OEM“, „Nutzfahrzeughersteller“,
+„Automotive-Softwareunternehmen“, „Finanzdienstleister“. Klarnamen bleiben der PDF-Projektübersicht
+vorbehalten, die gezielt an eine Person geht. Auch interne Projekt- und Systemnamen (CUSMES, PIT,
+PASS) sowie Dienstleister Dritter sind ersetzt. Eigene Arbeitgeber — MHP, Capgemini, Bosch
+Engineering — stehen weiterhin im Klartext.
+
 **Bewusst nicht enthalten:** Telefonnummer und Anschrift. Die Seite nennt nur E-Mail, LinkedIn und
 „Region Stuttgart". HTML-Kommentare sind kein Versteck — sie werden mitausgeliefert und stehen im
 Quelltext. Kontaktdaten, die nicht öffentlich sein sollen, gehören deshalb gar nicht erst in die

@@ -120,6 +120,23 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
   box-shadow:0 1px 3px rgba(20,24,29,.14);
 }
 .nav__links{display:flex;gap:26px;margin-left:auto;align-items:center}
+
+/* Sprachumschalter */
+.langtoggle{
+  display:flex;flex:none;margin-left:22px;
+  border:1px solid var(--line-strong);border-radius:999px;padding:2px;gap:2px;
+  background:var(--bg-elev);
+}
+.langtoggle__btn{
+  font-family:inherit;font-size:.6875rem;font-weight:600;letter-spacing:.06em;
+  padding:4px 9px;border-radius:999px;border:0;cursor:pointer;
+  background:transparent;color:var(--ink-3);
+  transition:background .16s ease,color .16s ease;
+}
+.langtoggle__btn:hover{color:var(--ink)}
+.langtoggle__btn[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+@media (max-width:860px){.langtoggle{margin-left:12px}}
+@media print{.langtoggle{display:none !important}}
 .nav__links a{
   font-size:.8125rem;font-weight:500;color:var(--ink-3);
   padding:4px 0;position:relative;transition:color .18s ease;
@@ -455,7 +472,7 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Zum Inhalt springen</a>
+<a class="skip" href="#main" data-en="Skip to content">Zum Inhalt springen</a>
 
 <!-- ============================ NAV ============================ -->
 <nav class="nav" id="nav">
@@ -465,13 +482,17 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
       Filip Stanicak <span>· Senior Consultant</span>
     </a>
     <div class="nav__links">
-      <a href="#profil">Profil</a>
-      <a href="#ansatz">Ansatz</a>
-      <a href="#schwerpunkte">Schwerpunkte</a>
-      <a href="#werdegang">Werdegang</a>
-      <a href="#projekte">Projekte</a>
-      <a href="#kompetenzen">Kompetenzen</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#profil" data-en="Profile">Profil</a>
+      <a href="#ansatz" data-en="Approach">Ansatz</a>
+      <a href="#schwerpunkte" data-en="Focus">Schwerpunkte</a>
+      <a href="#werdegang" data-en="Experience">Werdegang</a>
+      <a href="#projekte" data-en="Projects">Projekte</a>
+      <a href="#kompetenzen" data-en="Skills">Kompetenzen</a>
+      <a href="#kontakt" data-en="Contact">Kontakt</a>
+    </div>
+    <div class="langtoggle" role="group" aria-label="Sprache / Language">
+      <button class="langtoggle__btn" type="button" data-lang-set="de" aria-pressed="true" lang="de">DE</button>
+      <button class="langtoggle__btn" type="button" data-lang-set="en" aria-pressed="false" lang="en">EN</button>
     </div>
   </div>
 </nav>
@@ -483,17 +504,17 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
   <div class="wrap">
    <div class="hero__grid">
     <div>
-    <div class="hero__eyebrow">Aufbauen, wo noch nichts steht</div>
+    <div class="hero__eyebrow" data-en="Building what isn&#x27;t there yet">Aufbauen, wo noch nichts steht</div>
     <h1 class="hero__name">Filip Stanicak</h1>
-    <p class="hero__role">Senior Consultant — <em>Business Analyse, Prozessdesign &amp; Agile Delivery</em></p>
+    <p class="hero__role">Senior Consultant — <em data-en="Business Analysis, Process Design &amp; Agile Delivery">Business Analyse, Prozessdesign &amp; Agile Delivery</em></p>
 
-    <p class="hero__lead">
+    <p class="hero__lead" data-en="Across eight client projects the task was almost always the same: build a capability that did not exist before. Release management where releases ran unsteered. Test management where testing was nobody&#x27;s job. A delivery framework for two merged organisations that had none. A KPI system where estimates rested on gut feel.">
       In acht Kundenprojekten war die Aufgabe fast immer dieselbe: eine Funktion aufbauen, die es
       vorher nicht gab. Releasemanagement, wo Releases ungesteuert liefen. Testmanagement, wo Testen
       niemandes Aufgabe war. Ein Vorgehensmodell für zwei fusionierte Organisationen, die keines
       hatten. Ein KPI-System, wo nach Bauchgefühl geschätzt wurde.
     </p>
-    <p class="hero__lead">
+    <p class="hero__lead" data-en="In automotive since 2019, in consulting since 2021 — as a business analyst, scrum master and lead consultant. Across scaled and regulated development environments, from the customer app to the ECU. On the side, I build the tools this work leaves me missing.">
       Seit 2019 im Automotive-Umfeld, seit 2021 in der Beratung — als Business Analyst, Scrum Master
       und Lead Consultant. In skalierten und regulierten Entwicklungsumgebungen, von der Kunden-App
       bis zum Steuergerät. Nebenbei baue ich die Werkzeuge, die mir in dieser Arbeit fehlen, selbst.
@@ -502,7 +523,7 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
     <div class="actions">
       <a class="btn btn--primary" href="mailto:stanicakfilip@gmail.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
-        Kontakt aufnehmen
+        <span data-en="Get in touch">Kontakt aufnehmen</span>
       </a>
       <a class="btn" href="https://www.linkedin.com/in/filip-stanicak/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM2.4 21h5.16V9.5H2.4V21zM10.2 9.5V21h5.16v-6.2c0-2.02.7-3.1 2.3-3.1 1.42 0 2.02.9 2.02 3.1V21h5.16v-6.9c0-3.6-1.9-5.3-4.6-5.3-2.18 0-3.4 1.2-3.98 2.2h-.06V9.5H10.2z"/></svg>
@@ -515,20 +536,20 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
       <picture>
         <source media="screen and (max-width: 820px)" srcset="assets/avatar.jpg">
         <source srcset="assets/portrait@1x.jpg 350w, assets/portrait.jpg 700w" sizes="296px">
-        <img src="assets/portrait.jpg" alt="Porträtfoto von Filip Stanicak"
+        <img src="assets/portrait.jpg" alt="Porträtfoto von Filip Stanicak" data-en-alt="Portrait photo of Filip Stanicak"
              width="700" height="933" decoding="async">
       </picture>
       <figcaption class="portrait__cap">
         <b>Filip Stanicak</b>
-        Senior Consultant bei MHP<br>(A Porsche Company), Ludwigsburg
+        <span data-en="Senior Consultant at MHP">Senior Consultant bei MHP</span><br>(A Porsche Company), Ludwigsburg
       </figcaption>
     </figure>
    </div><!-- /hero__grid -->
 
     <div class="facts">
-      <div class="fact"><div class="fact__n">Seit 2019</div><div class="fact__l">im Automotive-Umfeld, seit 2021 in der Beratung</div></div>
-      <div class="fact"><div class="fact__n">8 Kundenprojekte</div><div class="fact__l">bei drei OEMs, einem Automotive-Softwareunternehmen, einem Nutzfahrzeughersteller und einem Finanzdienstleister</div></div>
-      <div class="fact"><div class="fact__n">3 Rollen</div><div class="fact__l">Business Analyst, Scrum Master und Lead Consultant</div></div>
+      <div class="fact"><div class="fact__n" data-en="Since 2019">Seit 2019</div><div class="fact__l" data-en="in automotive, in consulting since 2021">im Automotive-Umfeld, seit 2021 in der Beratung</div></div>
+      <div class="fact"><div class="fact__n" data-en="8 client projects">8 Kundenprojekte</div><div class="fact__l" data-en="at three OEMs, an automotive software company, a commercial vehicle manufacturer and a financial services provider">bei drei OEMs, einem Automotive-Softwareunternehmen, einem Nutzfahrzeughersteller und einem Finanzdienstleister</div></div>
+      <div class="fact"><div class="fact__n" data-en="3 roles">3 Rollen</div><div class="fact__l" data-en="Business analyst, scrum master and lead consultant">Business Analyst, Scrum Master und Lead Consultant</div></div>
     </div>
   </div>
 </header>
@@ -537,9 +558,9 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
 <section class="section" id="ansatz">
   <div class="wrap">
     <div class="section__head reveal">
-      <div class="section__kicker">Der rote Faden</div>
-      <h2 class="section__title">Acht Mal dieselbe Ausgangslage</h2>
-      <p class="section__sub">
+      <div class="section__kicker" data-en="The common thread">Der rote Faden</div>
+      <h2 class="section__title" data-en="The same starting point, eight times">Acht Mal dieselbe Ausgangslage</h2>
+      <p class="section__sub" data-en="Across three employers and eight client projects, the task was almost always to establish a capability the organisation did not yet have — not to optimise one that already existed.">
         Über drei Arbeitgeber und acht Kundenprojekte hinweg lag die Aufgabe fast immer darin, eine
         Funktion zu etablieren, die es in der Organisation noch nicht gab — nicht darin, eine
         bestehende zu optimieren.
@@ -548,55 +569,55 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
 
     <div class="pattern reveal">
       <div class="pattern__head">
-        <span>Ausgangslage</span><span></span><span>Aufgebaut</span>
+        <span data-en="Starting point">Ausgangslage</span><span></span><span data-en="Built">Aufgebaut</span>
       </div>
 
       <div class="pattern__row">
-        <div class="pattern__before">Releases liefen im Zwei-Wochen-Takt, ohne steuernden Prozess</div>
+        <div class="pattern__before" data-en="Releases shipped on a two-week cycle with no governing process">Releases liefen im Zwei-Wochen-Takt, ohne steuernden Prozess</div>
         <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-        <div class="pattern__after">Strukturiertes Releasemanagement über fünf Entwicklungsteams hinweg</div>
+        <div class="pattern__after" data-en="Structured release management across five development teams">Strukturiertes Releasemanagement über fünf Entwicklungsteams hinweg</div>
       </div>
 
       <div class="pattern__row">
-        <div class="pattern__before">Testen war organisatorisch niemandes Aufgabe</div>
+        <div class="pattern__before" data-en="Testing was organisationally nobody&#x27;s responsibility">Testen war organisatorisch niemandes Aufgabe</div>
         <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-        <div class="pattern__after">Testmanagement und erstes teamübergreifendes Cross-Team mit sieben Mitarbeitenden</div>
+        <div class="pattern__after" data-en="Test management and the first cross-team function, staffed with seven people">Testmanagement und erstes teamübergreifendes Cross-Team mit sieben Mitarbeitenden</div>
       </div>
 
       <div class="pattern__row">
-        <div class="pattern__before">Zwei fusionierte Abteilungen ohne gemeinsames Vorgehensmodell</div>
+        <div class="pattern__before" data-en="Two merged departments without a shared delivery framework">Zwei fusionierte Abteilungen ohne gemeinsames Vorgehensmodell</div>
         <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-        <div class="pattern__after">Vorgehensmodell aus SAFe und Systems Engineering für über 1.000 Mitarbeitende</div>
+        <div class="pattern__after" data-en="A framework combining SAFe and systems engineering for over 1,000 people">Vorgehensmodell aus SAFe und Systems Engineering für über 1.000 Mitarbeitende</div>
       </div>
 
       <div class="pattern__row">
-        <div class="pattern__before">Aufwände wurden geschätzt, ohne dass jemand die Treffsicherheit kannte</div>
+        <div class="pattern__before" data-en="Effort was estimated without anyone knowing how accurate the estimates were">Aufwände wurden geschätzt, ohne dass jemand die Treffsicherheit kannte</div>
         <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-        <div class="pattern__after">KPI-System, das Schätzabweichungen je Team sichtbar und damit steuerbar macht</div>
+        <div class="pattern__after" data-en="A KPI system that makes estimation variance visible per team, and therefore steerable">KPI-System, das Schätzabweichungen je Team sichtbar und damit steuerbar macht</div>
       </div>
 
       <div class="pattern__row">
-        <div class="pattern__before">Prozess- und Systemwissen verteilt über gewachsene Ablagen</div>
+        <div class="pattern__before" data-en="Process and system knowledge scattered across repositories that had simply grown">Prozess- und Systemwissen verteilt über gewachsene Ablagen</div>
         <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-        <div class="pattern__after">Single Source of Truth auf Atlassian-Basis, konzipiert und in Umsetzung</div>
+        <div class="pattern__after" data-en="A single source of truth on Atlassian, designed and in rollout">Single Source of Truth auf Atlassian-Basis, konzipiert und in Umsetzung</div>
       </div>
 
       <div class="pattern__row">
-        <div class="pattern__before">Lizenzvergabe über E-Mail-Abstimmungen und mehrere Portale</div>
+        <div class="pattern__before" data-en="Licence allocation handled through email threads and several portals">Lizenzvergabe über E-Mail-Abstimmungen und mehrere Portale</div>
         <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-        <div class="pattern__after">Durchgängiger Prozess über rund acht angebundene Systeme</div>
+        <div class="pattern__after" data-en="One end-to-end process across around eight connected systems">Durchgängiger Prozess über rund acht angebundene Systeme</div>
       </div>
 
       <div class="pattern__row">
-        <div class="pattern__before">Rund 500 Dokumentationsseiten ohne Struktur und ohne Vorkontext</div>
+        <div class="pattern__before" data-en="Around 500 documentation pages with no structure and no prior context">Rund 500 Dokumentationsseiten ohne Struktur und ohne Vorkontext</div>
         <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-        <div class="pattern__after">Neue Dokumentationsstruktur, inhaltlich zugeordnet und auffindbar</div>
+        <div class="pattern__after" data-en="A new documentation structure, sorted by subject and findable">Neue Dokumentationsstruktur, inhaltlich zugeordnet und auffindbar</div>
       </div>
 
       <div class="pattern__row">
-        <div class="pattern__before">Über 60 Partner und Zulieferer ohne Konsolidierungslogik</div>
+        <div class="pattern__before" data-en="Over 60 partners and suppliers with no consolidation logic">Über 60 Partner und Zulieferer ohne Konsolidierungslogik</div>
         <div class="pattern__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-        <div class="pattern__after">Rahmenvertragsstrategie, die bündelt und Abhängigkeiten zugleich begrenzt</div>
+        <div class="pattern__after" data-en="A framework-agreement strategy that bundles while capping dependencies">Rahmenvertragsstrategie, die bündelt und Abhängigkeiten zugleich begrenzt</div>
       </div>
     </div>
   </div>
@@ -606,9 +627,9 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
 <section class="section section--sunk" id="schwerpunkte">
   <div class="wrap">
     <div class="section__head reveal">
-      <div class="section__kicker">Fachliche Schwerpunkte</div>
-      <h2 class="section__title">Wofür man mich holt</h2>
-      <p class="section__sub">
+      <div class="section__kicker" data-en="Areas of focus">Fachliche Schwerpunkte</div>
+      <h2 class="section__title" data-en="What I get brought in for">Wofür man mich holt</h2>
+      <p class="section__sub" data-en="Six themes that recur across every project — usually where a function or a process does not yet exist.">
         Sechs Themen, die sich über alle Projekte hinweg wiederholen — meist dort, wo eine Funktion
         oder ein Prozess noch nicht existiert.
       </p>
@@ -617,38 +638,38 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
     <div class="focus">
       <article class="focus__card reveal">
         <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
-        <h3>Requirements Engineering &amp; Business Analyse</h3>
-        <p>Fachliche Analyse und Spezifikation in internationalen Systemlandschaften — von der Kunden-App bis zum Steuergerät.</p>
+        <h3 data-en="Requirements Engineering &amp; Business Analysis">Requirements Engineering &amp; Business Analyse</h3>
+        <p data-en="Analysis and specification across international system landscapes — from the customer app to the ECU.">Fachliche Analyse und Spezifikation in internationalen Systemlandschaften — von der Kunden-App bis zum Steuergerät.</p>
       </article>
 
       <article class="focus__card reveal">
         <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
-        <h3>Agile Delivery, Scrum &amp; SAFe</h3>
-        <p>Scrum Master für bis zu fünf Teams parallel, Zeremonien und Steuerung in skalierten Setups bis zum Agile Release Train.</p>
+        <h3 data-en="Agile Delivery, Scrum &amp; SAFe">Agile Delivery, Scrum &amp; SAFe</h3>
+        <p data-en="Scrum master for up to five teams in parallel; ceremonies and steering in scaled setups up to the agile release train.">Scrum Master für bis zu fünf Teams parallel, Zeremonien und Steuerung in skalierten Setups bis zum Agile Release Train.</p>
       </article>
 
       <article class="focus__card reveal">
         <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
-        <h3>Test- und Releasemanagement</h3>
-        <p>Aufbau von Testmanagement und Releaseprozessen in Umgebungen ohne bestehende Struktur, inklusive Cross-Team-Etablierung.</p>
+        <h3 data-en="Test &amp; Release Management">Test- und Releasemanagement</h3>
+        <p data-en="Building test management and release processes in environments with no existing structure, including establishing cross-team functions.">Aufbau von Testmanagement und Releaseprozessen in Umgebungen ohne bestehende Struktur, inklusive Cross-Team-Etablierung.</p>
       </article>
 
       <article class="focus__card reveal">
         <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4a3 3 0 0 1 3 3V14M6.5 10v4a3 3 0 0 0 3 3H14"/></svg></div>
-        <h3>Vorgehensmodelle &amp; Prozessdesign</h3>
-        <p>Rollen, Artefakte und Entscheidungswege — etwa als Kombination aus SAFe und Systems Engineering nach einer Organisationsfusion.</p>
+        <h3 data-en="Delivery Frameworks &amp; Process Design">Vorgehensmodelle &amp; Prozessdesign</h3>
+        <p data-en="Roles, artefacts and decision paths — for instance as a combination of SAFe and systems engineering after an organisational merger.">Rollen, Artefakte und Entscheidungswege — etwa als Kombination aus SAFe und Systems Engineering nach einer Organisationsfusion.</p>
       </article>
 
       <article class="focus__card reveal">
         <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20V8"/></svg></div>
-        <h3>KPI-Systeme &amp; Steuerungsgrößen</h3>
-        <p>Messbare Schätzgenauigkeit, Kostentransparenz und Partnerstrategien — Grundlage für Entscheidungen statt Bauchgefühl.</p>
+        <h3 data-en="KPI Systems &amp; Steering Metrics">KPI-Systeme &amp; Steuerungsgrößen</h3>
+        <p data-en="Measurable estimation accuracy, cost transparency and partner strategies — a basis for decisions instead of gut feel.">Messbare Schätzgenauigkeit, Kostentransparenz und Partnerstrategien — Grundlage für Entscheidungen statt Bauchgefühl.</p>
       </article>
 
       <article class="focus__card reveal">
         <div class="focus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M3 12h3M18 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg></div>
-        <h3>AI-Enablement in der Beratung</h3>
-        <p>Aufbau der AI-Themen in der Business-Analyse-Community, Tool-Piloten mit unternehmensweitem Rollout, eigene Tool-Entwicklung.</p>
+        <h3 data-en="AI Enablement in Consulting">AI-Enablement in der Beratung</h3>
+        <p data-en="Building the AI agenda within the business analysis community, tool pilots that went company-wide, own tool development.">Aufbau der AI-Themen in der Business-Analyse-Community, Tool-Piloten mit unternehmensweitem Rollout, eigene Tool-Entwicklung.</p>
       </article>
     </div>
   </div>
@@ -658,32 +679,32 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
 <section class="section" id="werdegang">
   <div class="wrap">
     <div class="section__head reveal">
-      <div class="section__kicker">Beruflicher Werdegang</div>
-      <h2 class="section__title">Stationen</h2>
+      <div class="section__kicker" data-en="Professional experience">Beruflicher Werdegang</div>
+      <h2 class="section__title" data-en="Career">Stationen</h2>
     </div>
 
     <div class="tl">
       <article class="tl__item reveal">
         <div class="tl__when">
-          01/2024 – heute
-          <div class="tl__now"><span class="tl__dot"></span>aktuell</div>
+          <span data-en="01/2024 – present">01/2024 – heute</span>
+          <div class="tl__now"><span class="tl__dot"></span><span data-en="current">aktuell</span></div>
         </div>
         <div>
           <h3 class="tl__role">Senior Consultant</h3>
           <p class="tl__org"><b>MHP (A Porsche Company)</b>, Ludwigsburg</p>
-          <p class="tl__ctx">
+          <p class="tl__ctx" data-en="Six projects at a premium OEM, an automotive software company, a commercial vehicle manufacturer and a financial services provider.">
             Sechs Projekte bei einem Premium-OEM, einem Automotive-Softwareunternehmen, einem
             Nutzfahrzeughersteller und einem Finanzdienstleister.
           </p>
           <ul class="bullets">
-            <li>Fachliche Leitung eines dreiköpfigen Beratungsteams bei der Entwicklung eines Vorgehensmodells aus SAFe und Systems Engineering für eine fusionierte Software-/Hardware-Organisation mit über 1.000 Mitarbeitenden</li>
-            <li>Aufbau eines Testmanagements inklusive des ersten teamübergreifenden Cross-Teams für eine zuvor nicht etablierte Funktion</li>
-            <li>Scrum Master für bis zu fünf Entwicklungsteams parallel sowie Einführung eines Releasemanagements in einer Umgebung ohne bestehenden Prozess</li>
-            <li>Entwicklung eines KPI-Systems, das Schätzabweichungen je Team und die monatlichen Kosten eines Agile Release Trains mit rund 25 Beteiligten messbar macht</li>
-            <li>Evaluation von über 60 Partnern und Zulieferern sowie Erarbeitung einer Konsolidierungsstrategie über Rahmenverträge bei gleichzeitiger Begrenzung von Abhängigkeiten</li>
-            <li>End-to-End-Test und fachliche Verantwortung für Fahrzeugfunktionen über die gesamte Kette von der Kunden-App bis zum Steuergerät</li>
-            <li>Konzeption einer Single Source of Truth auf Atlassian-Basis für sämtliche Prozess- und Methodenartefakte</li>
-            <li>Intern: Staffing, Aufbau der AI-Themen in der Business-Analyse-Community, Mitwirkung an AI-Tool-Piloten mit anschließendem unternehmensweitem Rollout sowie Eigenentwicklung eines internen Retrospektiven-Tools</li>
+            <li data-en="Led a three-person consulting team, in a subject-matter capacity, developing a delivery framework combining SAFe and systems engineering for a merged software/hardware organisation of over 1,000 people">Fachliche Leitung eines dreiköpfigen Beratungsteams bei der Entwicklung eines Vorgehensmodells aus SAFe und Systems Engineering für eine fusionierte Software-/Hardware-Organisation mit über 1.000 Mitarbeitenden</li>
+            <li data-en="Built test management from scratch, including the first cross-team unit, for a function that had never been established">Aufbau eines Testmanagements inklusive des ersten teamübergreifenden Cross-Teams für eine zuvor nicht etablierte Funktion</li>
+            <li data-en="Scrum master for up to five development teams in parallel, and introduced release management in an environment with no existing process">Scrum Master für bis zu fünf Entwicklungsteams parallel sowie Einführung eines Releasemanagements in einer Umgebung ohne bestehenden Prozess</li>
+            <li data-en="Developed a KPI system that makes estimation variance per team and the monthly cost of an agile release train of around 25 people measurable">Entwicklung eines KPI-Systems, das Schätzabweichungen je Team und die monatlichen Kosten eines Agile Release Trains mit rund 25 Beteiligten messbar macht</li>
+            <li data-en="Evaluated over 60 partners and suppliers and developed a consolidation strategy based on framework agreements while capping dependencies">Evaluation von über 60 Partnern und Zulieferern sowie Erarbeitung einer Konsolidierungsstrategie über Rahmenverträge bei gleichzeitiger Begrenzung von Abhängigkeiten</li>
+            <li data-en="End-to-end testing and subject-matter ownership of vehicle functions across the entire chain, from the customer app to the ECU">End-to-End-Test und fachliche Verantwortung für Fahrzeugfunktionen über die gesamte Kette von der Kunden-App bis zum Steuergerät</li>
+            <li data-en="Designed a single source of truth on Atlassian for all process and method artefacts">Konzeption einer Single Source of Truth auf Atlassian-Basis für sämtliche Prozess- und Methodenartefakte</li>
+            <li data-en="Internally: staffing, building the AI agenda within the business analysis community, contributing to AI tool pilots that were subsequently rolled out company-wide, and developing an internal retrospective tool">Intern: Staffing, Aufbau der AI-Themen in der Business-Analyse-Community, Mitwirkung an AI-Tool-Piloten mit anschließendem unternehmensweitem Rollout sowie Eigenentwicklung eines internen Retrospektiven-Tools</li>
           </ul>
         </div>
       </article>
@@ -693,16 +714,16 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
         <div>
           <h3 class="tl__role">Business Analyst</h3>
           <p class="tl__org"><b>Capgemini</b>, Stuttgart</p>
-          <p class="tl__ctx">
+          <p class="tl__ctx" data-en="The digital customer landscape of a premium OEM, plus system harmonisation at a second OEM.">
             Digitale Kundenlandschaft eines Premium-OEM sowie Systemharmonisierung bei einem weiteren OEM.
           </p>
           <ul class="bullets">
-            <li>Anforderungsanalyse und Spezifikation entlang der digitalen Kundenprozesse — von der Werkstattterminierung über die Fahrzeugkonfiguration bis zum Kaufvertrag</li>
-            <li>Fachliche Verantwortung für regelbasierte SMS-Prozesse (One-Time-Password, Terminbestätigungen, Marketing) über einen internationalen Provider, inklusive Einhaltung länderspezifischer B2C-Regularien in anspruchsvollen Märkten wie den VAE, Südkorea und Thailand</li>
-            <li>Konzeption einer Single Source of Truth über die Systemlandschaft eines weiteren OEM</li>
-            <li>Erstellung und Standardisierung von Templates, Spezifikationen und Analyseartefakten zur Verbesserung von Konsistenz und Nachvollziehbarkeit</li>
-            <li>Erfahrenster Business Analyst im Team zum Projektende, fachliches Mentoring eines Junior Business Analysts; Beförderung innerhalb von zwei Jahren</li>
-            <li>Unterstützung von Angebotsphasen und Pre-Sales durch Anforderungsanalysen und Strukturierung von Lösungsansätzen</li>
+            <li data-en="Requirements analysis and specification along the digital customer journey — from service scheduling through vehicle configuration to the purchase contract">Anforderungsanalyse und Spezifikation entlang der digitalen Kundenprozesse — von der Werkstattterminierung über die Fahrzeugkonfiguration bis zum Kaufvertrag</li>
+            <li data-en="Owned rule-based SMS processes (one-time passwords, appointment confirmations, marketing) via an international provider, including compliance with country-specific B2C regulation in demanding markets such as the UAE, South Korea and Thailand">Fachliche Verantwortung für regelbasierte SMS-Prozesse (One-Time-Password, Terminbestätigungen, Marketing) über einen internationalen Provider, inklusive Einhaltung länderspezifischer B2C-Regularien in anspruchsvollen Märkten wie den VAE, Südkorea und Thailand</li>
+            <li data-en="Designed a single source of truth spanning the system landscape of a second OEM">Konzeption einer Single Source of Truth über die Systemlandschaft eines weiteren OEM</li>
+            <li data-en="Created and standardised templates, specifications and analysis artefacts to improve consistency and traceability">Erstellung und Standardisierung von Templates, Spezifikationen und Analyseartefakten zur Verbesserung von Konsistenz und Nachvollziehbarkeit</li>
+            <li data-en="The most experienced business analyst on the team by the end of the project, mentoring a junior business analyst; promoted within two years">Erfahrenster Business Analyst im Team zum Projektende, fachliches Mentoring eines Junior Business Analysts; Beförderung innerhalb von zwei Jahren</li>
+            <li data-en="Supported bid phases and pre-sales through requirements analysis and structuring of solution approaches">Unterstützung von Angebotsphasen und Pre-Sales durch Anforderungsanalysen und Strukturierung von Lösungsansätzen</li>
           </ul>
         </div>
       </article>
@@ -710,12 +731,12 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
       <article class="tl__item reveal">
         <div class="tl__when">08/2019 – 02/2021</div>
         <div>
-          <h3 class="tl__role">Werkstudent, Praktikant &amp; Abschlussarbeit</h3>
+          <h3 class="tl__role" data-en="Working student, intern &amp; thesis">Werkstudent, Praktikant &amp; Abschlussarbeit</h3>
           <p class="tl__org"><b>Bosch Engineering</b>, Abstatt</p>
           <ul class="bullets">
-            <li>Anforderungsmanagement und Konzeption einer Webanwendung im Kalibrierungsumfeld als Ablösung einer bestehenden Excel- und Makrolösung</li>
-            <li>Fachliche Führung eines Entwicklungsteams in Indien für die Umsetzung</li>
-            <li>Mitarbeit an einer Teststrategie für Software im Kontext der Fahrzeugabgasmessung</li>
+            <li data-en="Requirements management and design of a web application in the calibration domain, replacing an existing Excel and macro solution">Anforderungsmanagement und Konzeption einer Webanwendung im Kalibrierungsumfeld als Ablösung einer bestehenden Excel- und Makrolösung</li>
+            <li data-en="Subject-matter lead for a development team in India delivering the implementation">Fachliche Führung eines Entwicklungsteams in Indien für die Umsetzung</li>
+            <li data-en="Contributed to a test strategy for software in the context of vehicle emissions measurement">Mitarbeit an einer Teststrategie für Software im Kontext der Fahrzeugabgasmessung</li>
           </ul>
         </div>
       </article>
@@ -723,9 +744,9 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
       <article class="tl__item reveal">
         <div class="tl__when">03/2017 – 02/2021</div>
         <div>
-          <h3 class="tl__role">Medien- und Kommunikationsinformatik</h3>
+          <h3 class="tl__role" data-en="Media and Communication Informatics">Medien- und Kommunikationsinformatik</h3>
           <p class="tl__org"><b>Hochschule Reutlingen</b> — Bachelor of Science</p>
-          <p class="tl__ctx">
+          <p class="tl__ctx" data-en="Bachelor&#x27;s thesis: designing a web application for the Calibration Release Programme at Bosch Engineering.">
             Bachelorarbeit: Konzeptionierung einer Webanwendung für das Calibration Release Programm
             bei Bosch Engineering.
           </p>
@@ -739,21 +760,21 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
 <section class="section section--sunk" id="projekte">
   <div class="wrap">
     <div class="section__head reveal">
-      <div class="section__kicker">Projektübersicht</div>
-      <h2 class="section__title">Ausgewählte Projekte</h2>
-      <p class="section__sub">
+      <div class="section__kicker" data-en="Project overview">Projektübersicht</div>
+      <h2 class="section__title" data-en="Selected projects">Ausgewählte Projekte</h2>
+      <p class="section__sub" data-en="Eight client projects at three OEMs, an automotive software company, a commercial vehicle manufacturer and a financial services provider — plus the working-student years and internal topics. Client names are deliberately anonymised. Filterable by theme.">
         Acht Kundenprojekte bei drei OEMs, einem Automotive-Softwareunternehmen, einem
         Nutzfahrzeughersteller und einem Finanzdienstleister — dazu die Werkstudentenzeit und
         interne Themen. Kundennamen sind bewusst anonymisiert. Nach Themenschwerpunkt filterbar.
       </p>
     </div>
 
-    <div class="filters reveal" role="group" aria-label="Projekte nach Thema filtern">
-      <button class="chip" type="button" data-filter="all" aria-pressed="true">Alle</button>
+    <div class="filters reveal" role="group" aria-label="Projekte nach Thema filtern" data-en-aria="Filter projects by theme">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true" data-en="All">Alle</button>
       <button class="chip" type="button" data-filter="agile" aria-pressed="false">Agile Delivery</button>
-      <button class="chip" type="button" data-filter="req" aria-pressed="false">Requirements &amp; Analyse</button>
+      <button class="chip" type="button" data-filter="req" aria-pressed="false" data-en="Requirements &amp; Analysis">Requirements &amp; Analyse</button>
       <button class="chip" type="button" data-filter="test" aria-pressed="false">Test &amp; Release</button>
-      <button class="chip" type="button" data-filter="prozess" aria-pressed="false">Prozess &amp; Methodik</button>
+      <button class="chip" type="button" data-filter="prozess" aria-pressed="false" data-en="Process &amp; Method">Prozess &amp; Methodik</button>
       <button class="chip" type="button" data-filter="ai" aria-pressed="false">AI &amp; Enablement</button>
     </div>
 
@@ -761,163 +782,163 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
 
       <article class="project reveal" data-tags="agile test req">
         <div class="project__meta">
-          <span class="project__client">Nutzfahrzeughersteller</span>
+          <span class="project__client" data-en="Commercial vehicle manufacturer">Nutzfahrzeughersteller</span>
           <span class="project__sep">·</span><span>MHP</span>
-          <span class="project__sep">·</span><span>seit 01/2026, laufend</span>
+          <span class="project__sep">·</span><span data-en="since 01/2026, ongoing">seit 01/2026, laufend</span>
         </div>
-        <h3>Aufbau eines Releasemanagements und agile Teamsteuerung</h3>
-        <p class="project__role">Scrum Master (80 %) und Business Analyst (20 %)</p>
-        <p class="project__ctx">
+        <h3 data-en="Building release management and steering agile teams">Aufbau eines Releasemanagements und agile Teamsteuerung</h3>
+        <p class="project__role" data-en="Scrum master (80%) and business analyst (20%)">Scrum Master (80 %) und Business Analyst (20 %)</p>
+        <p class="project__ctx" data-en="Supporting five development teams totalling ten people, many of whom work in several teams at once. No release management existed before: releases went out on a two-week cycle, flanked by a separate testing week run by an independent test team.">
           Betreuung von fünf Entwicklungsteams mit insgesamt zehn Mitarbeitenden, von denen viele
           parallel in mehreren Teams arbeiten. Zuvor existierte kein Releasemanagement: Releases
           erfolgten im Zwei-Wochen-Takt, flankiert von einer separaten Testing Week eines
           eigenständigen Testteams.
         </p>
         <ul class="bullets">
-          <li>Einführung eines strukturierten Releasemanagements über die betreuten Teams hinweg</li>
-          <li>Moderation und Weiterentwicklung der Scrum-Zeremonien bei stark verflochtenen Teamzugehörigkeiten</li>
-          <li>Fachliche Analyse und Anforderungsarbeit ergänzend zur Scrum-Master-Rolle</li>
+          <li data-en="Introduced structured release management across the teams supported">Einführung eines strukturierten Releasemanagements über die betreuten Teams hinweg</li>
+          <li data-en="Facilitated and evolved the scrum ceremonies despite heavily interwoven team memberships">Moderation und Weiterentwicklung der Scrum-Zeremonien bei stark verflochtenen Teamzugehörigkeiten</li>
+          <li data-en="Analysis and requirements work alongside the scrum master role">Fachliche Analyse und Anforderungsarbeit ergänzend zur Scrum-Master-Rolle</li>
         </ul>
-        <div class="project__tags"><span class="tag">Scrum Master</span><span class="tag">Releasemanagement</span><span class="tag">Nutzfahrzeuge</span></div>
+        <div class="project__tags"><span class="tag">Scrum Master</span><span class="tag" data-en="Release management">Releasemanagement</span><span class="tag" data-en="Commercial vehicles">Nutzfahrzeuge</span></div>
       </article>
 
       <article class="project reveal" data-tags="agile prozess">
         <div class="project__meta">
-          <span class="project__client">Finanzdienstleister</span>
+          <span class="project__client" data-en="Financial services provider">Finanzdienstleister</span>
           <span class="project__sep">·</span><span>MHP</span>
-          <span class="project__sep">·</span><span>12 Monate</span>
+          <span class="project__sep">·</span><span data-en="12 months">12 Monate</span>
         </div>
-        <h3>KPI-System und agile Steuerung eines Agile Release Trains</h3>
+        <h3 data-en="A KPI system and agile steering for an agile release train">KPI-System und agile Steuerung eines Agile Release Trains</h3>
         <p class="project__role">Scrum Master</p>
-        <p class="project__ctx">
+        <p class="project__ctx" data-en="Scrum master of the infrastructure team within an agile release train of three teams (core, calc, enablement) plus a management circle of around five people. Substantive focus: maintaining the ART infrastructure and preparing the decomposition of an on-premise monolith into microservices running on AWS.">
           Scrum Master des Infrastrukturteams innerhalb eines Agile Release Trains aus drei Teams
           (Core, Calc, Enablement) sowie einem Managementkreis von rund fünf Personen. Inhaltlicher
           Schwerpunkt: Aufrechterhaltung der ART-Infrastruktur sowie Vorarbeit zur Zerlegung eines
           On-Premise-Monolithen in Microservices und deren Betrieb in AWS.
         </p>
         <ul class="bullets">
-          <li>Konzeption und Einführung eines KPI-Systems, das geschätzte gegen tatsächlich erbrachte Story Points stellt und die Schätzgenauigkeit je Team messbar macht</li>
-          <li>Ableitung der monatlichen Gesamtkosten des ART aus den erfassten Aufwänden</li>
-          <li>Ergebnis: Schätzabweichungen sind seither je Team sichtbar und damit steuerbar, statt über den gesamten Train gemittelt zu verschwinden</li>
+          <li data-en="Designed and introduced a KPI system that sets estimated against delivered story points, making estimation accuracy measurable per team">Konzeption und Einführung eines KPI-Systems, das geschätzte gegen tatsächlich erbrachte Story Points stellt und die Schätzgenauigkeit je Team messbar macht</li>
+          <li data-en="Derived the ART&#x27;s total monthly cost from the recorded effort">Ableitung der monatlichen Gesamtkosten des ART aus den erfassten Aufwänden</li>
+          <li data-en="Outcome: estimation variance is now visible per team and therefore steerable, instead of disappearing into an average across the whole train">Ergebnis: Schätzabweichungen sind seither je Team sichtbar und damit steuerbar, statt über den gesamten Train gemittelt zu verschwinden</li>
         </ul>
-        <div class="project__tags"><span class="tag">SAFe / ART</span><span class="tag">KPI-System</span><span class="tag">AWS-Migration</span></div>
+        <div class="project__tags"><span class="tag">SAFe / ART</span><span class="tag" data-en="KPI system">KPI-System</span><span class="tag" data-en="AWS migration">AWS-Migration</span></div>
       </article>
 
       <article class="project reveal" data-tags="prozess test">
         <div class="project__meta">
-          <span class="project__client">Automotive-Softwareunternehmen</span>
+          <span class="project__client" data-en="Automotive software company">Automotive-Softwareunternehmen</span>
           <span class="project__sep">·</span><span>MHP</span>
-          <span class="project__sep">·</span><span>6 Monate</span>
+          <span class="project__sep">·</span><span data-en="6 months">6 Monate</span>
         </div>
-        <h3>Vorgehensmodell, Testmanagement und Partnerstrategie nach Organisationsfusion</h3>
-        <p class="project__role">Lead Consultant — fachliche Führung von zwei Consultants</p>
-        <p class="project__ctx">
+        <h3 data-en="Delivery framework, test management and partner strategy after a merger">Vorgehensmodell, Testmanagement und Partnerstrategie nach Organisationsfusion</h3>
+        <p class="project__role" data-en="Lead consultant — subject-matter lead for two consultants">Lead Consultant — fachliche Führung von zwei Consultants</p>
+        <p class="project__ctx" data-en="After a software and a hardware department merged, together comprising over 1,000 people, no shared delivery framework existed.">
           Nach der Fusion einer Software- und einer Hardwareabteilung mit insgesamt über 1.000
           Mitarbeitenden bestand kein gemeinsames Vorgehensmodell.
         </p>
         <ul class="bullets">
-          <li>Entwicklung eines Vorgehensmodells als Kombination aus SAFe und Systems Engineering mit klarer Definition von Rollen, Artefakten und Entscheidungswegen</li>
-          <li>Aufbau eines Testmanagements und Etablierung des ersten Cross-Teams mit sieben Mitarbeitenden für eine zuvor nicht existierende Funktion</li>
-          <li>Evaluation von über 60 Partnern und Zulieferern anhand des jeweiligen Projektvolumens; Konsolidierungsstrategie zur Bündelung kleinerer Vergaben unter Rahmenverträgen bei gleichzeitiger Begrenzung von Abhängigkeiten</li>
-          <li>Vollständige Konzeption einer Single Source of Truth auf Atlassian-Basis für alle Systeme im Verantwortungsbereich des Cross-Teams (Process &amp; Methodology)</li>
+          <li data-en="Developed a delivery framework combining SAFe and systems engineering, with roles, artefacts and decision paths clearly defined">Entwicklung eines Vorgehensmodells als Kombination aus SAFe und Systems Engineering mit klarer Definition von Rollen, Artefakten und Entscheidungswegen</li>
+          <li data-en="Built test management and established the first cross-team unit of seven people for a function that had not existed before">Aufbau eines Testmanagements und Etablierung des ersten Cross-Teams mit sieben Mitarbeitenden für eine zuvor nicht existierende Funktion</li>
+          <li data-en="Evaluated over 60 partners and suppliers by project volume; consolidation strategy bundling smaller awards under framework agreements while capping dependencies">Evaluation von über 60 Partnern und Zulieferern anhand des jeweiligen Projektvolumens; Konsolidierungsstrategie zur Bündelung kleinerer Vergaben unter Rahmenverträgen bei gleichzeitiger Begrenzung von Abhängigkeiten</li>
+          <li data-en="Full design of a single source of truth on Atlassian for every system owned by the cross-team (process &amp; methodology)">Vollständige Konzeption einer Single Source of Truth auf Atlassian-Basis für alle Systeme im Verantwortungsbereich des Cross-Teams (Process &amp; Methodology)</li>
         </ul>
-        <div class="project__tags"><span class="tag">Vorgehensmodell</span><span class="tag">Systems Engineering</span><span class="tag">Lieferantensteuerung</span></div>
+        <div class="project__tags"><span class="tag" data-en="Delivery framework">Vorgehensmodell</span><span class="tag">Systems Engineering</span><span class="tag" data-en="Supplier management">Lieferantensteuerung</span></div>
       </article>
 
       <article class="project reveal" data-tags="test req">
         <div class="project__meta">
-          <span class="project__client">Premium-OEM</span>
+          <span class="project__client" data-en="Premium OEM">Premium-OEM</span>
           <span class="project__sep">·</span><span>MHP</span>
-          <span class="project__sep">·</span><span>6 Monate</span>
+          <span class="project__sep">·</span><span data-en="6 months">6 Monate</span>
         </div>
-        <h3>End-to-End-Test und Fachverantwortung für Fahrzeugfunktionen</h3>
-        <p class="project__role">E2E-Tester und Fachverantwortlicher</p>
-        <p class="project__ctx">
+        <h3 data-en="End-to-end testing and subject-matter ownership of vehicle functions">End-to-End-Test und Fachverantwortung für Fahrzeugfunktionen</h3>
+        <p class="project__role" data-en="E2E tester and subject-matter owner">E2E-Tester und Fachverantwortlicher</p>
+        <p class="project__ctx" data-en="Subject-matter ownership of the lights and horn functions across all model series, each triggered from the customer app and executed in the vehicle.">
           Fachliche Verantwortung für die Funktionen Licht und Hupe über alle Baureihen,
           jeweils ausgelöst aus der Kunden-App und ausgeführt im Fahrzeug.
         </p>
         <ul class="bullets">
-          <li>Test der gesamten Wirkkette über alle Schnittstellen hinweg, von der Auslösung in der App bis zum Signaleingang im Steuergerät</li>
-          <li>Reproduktion sämtlicher gefundener Fehler sowie deren Analyse und Zuordnung an die zuständigen Entwicklungsteams</li>
-          <li>Verantwortung für Logging und Monitoring im Testumfeld</li>
+          <li data-en="Tested the entire chain of effect across all interfaces, from the trigger in the app to the signal arriving at the ECU">Test der gesamten Wirkkette über alle Schnittstellen hinweg, von der Auslösung in der App bis zum Signaleingang im Steuergerät</li>
+          <li data-en="Reproduced every defect found, analysed it and routed it to the responsible development team">Reproduktion sämtlicher gefundener Fehler sowie deren Analyse und Zuordnung an die zuständigen Entwicklungsteams</li>
+          <li data-en="Owned logging and monitoring in the test environment">Verantwortung für Logging und Monitoring im Testumfeld</li>
         </ul>
-        <div class="project__tags"><span class="tag">E2E-Test</span><span class="tag">Steuergerät</span><span class="tag">Logging &amp; Monitoring</span></div>
+        <div class="project__tags"><span class="tag" data-en="E2E testing">E2E-Test</span><span class="tag" data-en="ECU">Steuergerät</span><span class="tag" data-en="Logging &amp; monitoring">Logging &amp; Monitoring</span></div>
       </article>
 
       <article class="project reveal" data-tags="req prozess">
         <div class="project__meta">
-          <span class="project__client">Premium-OEM</span>
+          <span class="project__client" data-en="Premium OEM">Premium-OEM</span>
           <span class="project__sep">·</span><span>MHP</span>
-          <span class="project__sep">·</span><span>3 Monate</span>
+          <span class="project__sep">·</span><span data-en="3 months">3 Monate</span>
         </div>
-        <h3>Automatisierung der Lizenzvergabe</h3>
+        <h3 data-en="Automating licence allocation">Automatisierung der Lizenzvergabe</h3>
         <p class="project__role">Business Analyst</p>
-        <p class="project__ctx">
+        <p class="project__ctx" data-en="Software licences were allocated through scattered email approvals and by manually visiting several portals.">
           Die Vergabe von Softwarelizenzen erfolgte über verteilte E-Mail-Abstimmungen und den
           manuellen Aufruf mehrerer Portale.
         </p>
         <ul class="bullets">
-          <li>Fachliche Konzeption der Anbindung von rund acht Systemen an ein neues zentrales Produkt</li>
-          <li>Überführung des zuvor manuellen, mehrstufigen Prozesses in eine durchgängige Toollösung</li>
+          <li data-en="Designed the integration of around eight systems into a new central product">Fachliche Konzeption der Anbindung von rund acht Systemen an ein neues zentrales Produkt</li>
+          <li data-en="Moved the previously manual, multi-stage process into a single end-to-end tool">Überführung des zuvor manuellen, mehrstufigen Prozesses in eine durchgängige Toollösung</li>
         </ul>
-        <div class="project__tags"><span class="tag">Prozessautomatisierung</span><span class="tag">Systemintegration</span></div>
+        <div class="project__tags"><span class="tag" data-en="Process automation">Prozessautomatisierung</span><span class="tag" data-en="System integration">Systemintegration</span></div>
       </article>
 
       <article class="project reveal" data-tags="prozess req">
         <div class="project__meta">
-          <span class="project__client">Premium-OEM</span>
+          <span class="project__client" data-en="Premium OEM">Premium-OEM</span>
           <span class="project__sep">·</span><span>MHP</span>
-          <span class="project__sep">·</span><span>3 Monate</span>
+          <span class="project__sep">·</span><span data-en="3 months">3 Monate</span>
         </div>
-        <h3>Migration der Dokumentationslandschaft</h3>
+        <h3 data-en="Migrating the documentation landscape">Migration der Dokumentationslandschaft</h3>
         <p class="project__role">Business Analyst</p>
-        <p class="project__ctx">
+        <p class="project__ctx" data-en="Moving around 500 Confluence pages from a legacy template into a new structure.">
           Überführung von rund 500 Confluence-Seiten aus einer Altvorlage in eine neue Struktur.
         </p>
         <ul class="bullets">
-          <li>Inhaltliche Analyse und Zuordnung sämtlicher Themen ohne verfügbaren Vorkontext</li>
-          <li>Sicherstellung von Konsistenz und Auffindbarkeit in der neuen Dokumentationsstruktur</li>
+          <li data-en="Analysed and classified every topic by content, with no prior context available">Inhaltliche Analyse und Zuordnung sämtlicher Themen ohne verfügbaren Vorkontext</li>
+          <li data-en="Ensured consistency and findability in the new documentation structure">Sicherstellung von Konsistenz und Auffindbarkeit in der neuen Dokumentationsstruktur</li>
         </ul>
-        <div class="project__tags"><span class="tag">Confluence</span><span class="tag">Informationsarchitektur</span></div>
+        <div class="project__tags"><span class="tag">Confluence</span><span class="tag" data-en="Information architecture">Informationsarchitektur</span></div>
       </article>
 
       <article class="project reveal" data-tags="req agile">
         <div class="project__meta">
-          <span class="project__client">Premium-OEM</span>
+          <span class="project__client" data-en="Premium OEM">Premium-OEM</span>
           <span class="project__sep">·</span><span>Capgemini</span>
-          <span class="project__sep">·</span><span>24 Monate</span>
+          <span class="project__sep">·</span><span data-en="24 months">24 Monate</span>
         </div>
-        <h3>Digitale Kundenlandschaft vom Termin bis zum Kaufvertrag</h3>
+        <h3 data-en="Digital customer landscape, from appointment to purchase contract">Digitale Kundenlandschaft vom Termin bis zum Kaufvertrag</h3>
         <p class="project__role">Business Analyst</p>
-        <p class="project__ctx">
+        <p class="project__ctx" data-en="Delivering the entire digital customer journey, from service scheduling through vehicle configuration to the purchase contract. The business team started at seven people; delivery was organised as scrum but matched an agile release train in scale.">
           Bereitstellung der gesamten digitalen Kundenstrecke, von der Werkstattterminierung über die
           Fahrzeugkonfiguration bis zum Kaufvertrag. Das Business-Team umfasste anfangs sieben
           Personen; die Delivery war nach Scrum organisiert, entsprach im Umfang jedoch einem Agile
           Release Train.
         </p>
         <ul class="bullets">
-          <li>Analyse, Dokumentation und Weiterentwicklung fachlicher und technischer Anforderungen in einer internationalen Systemlandschaft</li>
-          <li>Fachliche Verantwortung für regelbasierte SMS-Prozesse über einen internationalen Provider: One-Time-Password, Terminbestätigungen und Marketingnachrichten</li>
-          <li>Erarbeitung und Durchsetzung der regulatorischen Anforderungen an B2C-SMS-Verkehr je Markt zur Vermeidung von Strafzahlungen und Providersperrungen — besondere Anforderungen in den VAE, Südkorea und Thailand</li>
-          <li>Erstellung und Standardisierung von Templates, Spezifikationen und Analyseartefakten</li>
-          <li>Erfahrenster Business Analyst im Team zum Projektende, fachliches Mentoring eines Junior Business Analysts</li>
+          <li data-en="Analysed, documented and evolved business and technical requirements across an international system landscape">Analyse, Dokumentation und Weiterentwicklung fachlicher und technischer Anforderungen in einer internationalen Systemlandschaft</li>
+          <li data-en="Owned rule-based SMS processes via an international provider: one-time passwords, appointment confirmations and marketing messages">Fachliche Verantwortung für regelbasierte SMS-Prozesse über einen internationalen Provider: One-Time-Password, Terminbestätigungen und Marketingnachrichten</li>
+          <li data-en="Worked out and enforced the regulatory requirements for B2C SMS traffic per market to avoid penalties and provider blocks — particular demands in the UAE, South Korea and Thailand">Erarbeitung und Durchsetzung der regulatorischen Anforderungen an B2C-SMS-Verkehr je Markt zur Vermeidung von Strafzahlungen und Providersperrungen — besondere Anforderungen in den VAE, Südkorea und Thailand</li>
+          <li data-en="Created and standardised templates, specifications and analysis artefacts">Erstellung und Standardisierung von Templates, Spezifikationen und Analyseartefakten</li>
+          <li data-en="The most experienced business analyst on the team by the end of the project, mentoring a junior business analyst">Erfahrenster Business Analyst im Team zum Projektende, fachliches Mentoring eines Junior Business Analysts</li>
         </ul>
-        <div class="project__tags"><span class="tag">Requirements Engineering</span><span class="tag">Regulatorik B2C</span><span class="tag">Internationale Rollouts</span></div>
+        <div class="project__tags"><span class="tag">Requirements Engineering</span><span class="tag" data-en="B2C regulation">Regulatorik B2C</span><span class="tag" data-en="International rollouts">Internationale Rollouts</span></div>
       </article>
 
       <article class="project reveal" data-tags="req prozess">
         <div class="project__meta">
-          <span class="project__client">Weiterer Premium-OEM</span>
+          <span class="project__client" data-en="Second premium OEM">Weiterer Premium-OEM</span>
           <span class="project__sep">·</span><span>Capgemini</span>
-          <span class="project__sep">·</span><span>6 Monate</span>
+          <span class="project__sep">·</span><span data-en="6 months">6 Monate</span>
         </div>
-        <h3>Single Source of Truth über die Systemlandschaft</h3>
+        <h3 data-en="A single source of truth across the system landscape">Single Source of Truth über die Systemlandschaft</h3>
         <p class="project__role">Business Analyst</p>
         <ul class="bullets">
-          <li>Konzeption einer übergreifenden Single Source of Truth für sämtliche beteiligten Systeme</li>
-          <li>Abstimmung mit internationalen Stakeholdern zur Harmonisierung bestehender Datenquellen</li>
+          <li data-en="Designed an overarching single source of truth covering every system involved">Konzeption einer übergreifenden Single Source of Truth für sämtliche beteiligten Systeme</li>
+          <li data-en="Aligned with international stakeholders to harmonise existing data sources">Abstimmung mit internationalen Stakeholdern zur Harmonisierung bestehender Datenquellen</li>
         </ul>
-        <div class="project__tags"><span class="tag">Single Source of Truth</span><span class="tag">Stakeholder-Management</span></div>
+        <div class="project__tags"><span class="tag">Single Source of Truth</span><span class="tag" data-en="Stakeholder management">Stakeholder-Management</span></div>
       </article>
 
       <article class="project reveal" data-tags="req test">
@@ -925,35 +946,35 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
           <span class="project__client">Bosch Engineering</span>
           <span class="project__sep">·</span><span>08/2019 – 02/2021</span>
         </div>
-        <h3>Calibration Release Programm: Konzeption einer Webanwendung</h3>
-        <p class="project__role">Werkstudent, Praktikant und Abschlussarbeit</p>
-        <p class="project__ctx">
+        <h3 data-en="Calibration Release Programme: designing a web application">Calibration Release Programm: Konzeption einer Webanwendung</h3>
+        <p class="project__role" data-en="Working student, intern and thesis">Werkstudent, Praktikant und Abschlussarbeit</p>
+        <p class="project__ctx" data-en="Calibration engineers and test technicians had until then recorded their driving results solely in Excel and macros.">
           Applikateure und Messtechniker erfassten ihre Fahrergebnisse bis dahin ausschließlich über
           Excel und Makros.
         </p>
         <ul class="bullets">
-          <li>Konzeption einer Webanwendung zur Erfassung der Messergebnisse und zur Führung durch den Bosch-Engineering-Prozess</li>
-          <li>Fachliche Führung eines Entwicklungsteams in Indien für die Implementierung</li>
-          <li>Planung, Priorisierung und Spezifikation technischer Anforderungen, Experteninterviews und Prototyping</li>
-          <li>Mitarbeit an einer Teststrategie für Software im Kontext der Fahrzeugabgasmessung</li>
+          <li data-en="Designed a web application to capture measurement results and guide users through the Bosch Engineering process">Konzeption einer Webanwendung zur Erfassung der Messergebnisse und zur Führung durch den Bosch-Engineering-Prozess</li>
+          <li data-en="Subject-matter lead for a development team in India delivering the implementation">Fachliche Führung eines Entwicklungsteams in Indien für die Implementierung</li>
+          <li data-en="Planned, prioritised and specified technical requirements, ran expert interviews and prototyping">Planung, Priorisierung und Spezifikation technischer Anforderungen, Experteninterviews und Prototyping</li>
+          <li data-en="Contributed to a test strategy for software in the context of vehicle emissions measurement">Mitarbeit an einer Teststrategie für Software im Kontext der Fahrzeugabgasmessung</li>
         </ul>
-        <div class="project__tags"><span class="tag">Anforderungsmanagement</span><span class="tag">Kalibrierung</span><span class="tag">Offshore-Steuerung</span></div>
+        <div class="project__tags"><span class="tag" data-en="Requirements management">Anforderungsmanagement</span><span class="tag" data-en="Calibration">Kalibrierung</span><span class="tag" data-en="Offshore management">Offshore-Steuerung</span></div>
       </article>
 
       <article class="project reveal" data-tags="ai prozess">
         <div class="project__meta">
-          <span class="project__client">Interne Themen</span>
+          <span class="project__client" data-en="Internal topics">Interne Themen</span>
           <span class="project__sep">·</span><span>MHP</span>
-          <span class="project__sep">·</span><span>begleitend zur Projektarbeit</span>
+          <span class="project__sep">·</span><span data-en="alongside project work">begleitend zur Projektarbeit</span>
         </div>
-        <h3>AI-Enablement, Community-Aufbau und Staffing</h3>
+        <h3 data-en="AI enablement, community building and staffing">AI-Enablement, Community-Aufbau und Staffing</h3>
         <ul class="bullets">
-          <li>Aufbau und Vorantreiben der AI-Themen innerhalb der Business-Analyse-Community</li>
-          <li>Teilnahme an Piloten für AI-Tools, die anschließend unternehmensweit eingeführt wurden</li>
-          <li>Eigenentwicklung eines internen Tools zur Durchführung von Retrospektiven</li>
-          <li>Staffing und Besetzung von Projekten</li>
+          <li data-en="Built and drove the AI agenda within the business analysis community">Aufbau und Vorantreiben der AI-Themen innerhalb der Business-Analyse-Community</li>
+          <li data-en="Took part in AI tool pilots that were subsequently rolled out company-wide">Teilnahme an Piloten für AI-Tools, die anschließend unternehmensweit eingeführt wurden</li>
+          <li data-en="Developed an internal tool for running retrospectives">Eigenentwicklung eines internen Tools zur Durchführung von Retrospektiven</li>
+          <li data-en="Staffing and resourcing of projects">Staffing und Besetzung von Projekten</li>
         </ul>
-        <div class="project__tags"><span class="tag">AI in der Business Analyse</span><span class="tag">Community</span><span class="tag">Tool-Entwicklung</span></div>
+        <div class="project__tags"><span class="tag" data-en="AI in business analysis">AI in der Business Analyse</span><span class="tag">Community</span><span class="tag" data-en="Tool development">Tool-Entwicklung</span></div>
       </article>
 
     </div>
@@ -964,56 +985,56 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
 <section class="section" id="kompetenzen">
   <div class="wrap">
     <div class="section__head reveal">
-      <div class="section__kicker">Kompetenzen</div>
-      <h2 class="section__title">Methoden, Zertifikate und Sprachen</h2>
+      <div class="section__kicker" data-en="Skills">Kompetenzen</div>
+      <h2 class="section__title" data-en="Methods, certifications and languages">Methoden, Zertifikate und Sprachen</h2>
     </div>
 
     <div class="cols">
       <div class="reveal">
         <div class="skillgroup">
-          <h4>Analyse &amp; Anforderungen</h4>
+          <h4 data-en="Analysis &amp; requirements">Analyse &amp; Anforderungen</h4>
           <div class="pills">
             <span class="pill">Requirements Engineering</span>
-            <span class="pill">Business Analyse</span>
-            <span class="pill">Spezifikation &amp; Templates</span>
+            <span class="pill" data-en="Business analysis">Business Analyse</span>
+            <span class="pill" data-en="Specification &amp; templates">Spezifikation &amp; Templates</span>
             <span class="pill">Single Source of Truth</span>
-            <span class="pill">Prozessanalyse</span>
+            <span class="pill" data-en="Process analysis">Prozessanalyse</span>
             <span class="pill">Prototyping</span>
-            <span class="pill">Experteninterviews</span>
+            <span class="pill" data-en="Expert interviews">Experteninterviews</span>
           </div>
         </div>
 
         <div class="skillgroup">
-          <h4>Agile Delivery &amp; Methodik</h4>
+          <h4 data-en="Agile delivery &amp; method">Agile Delivery &amp; Methodik</h4>
           <div class="pills">
             <span class="pill">Scrum Master</span>
             <span class="pill">SAFe / Agile Release Train</span>
             <span class="pill">Systems Engineering</span>
-            <span class="pill">Vorgehensmodelle</span>
-            <span class="pill">Moderation</span>
-            <span class="pill">KPI-Systeme</span>
-            <span class="pill">Fachliche Führung</span>
+            <span class="pill" data-en="Delivery frameworks">Vorgehensmodelle</span>
+            <span class="pill" data-en="Facilitation">Moderation</span>
+            <span class="pill" data-en="KPI systems">KPI-Systeme</span>
+            <span class="pill" data-en="Subject-matter leadership">Fachliche Führung</span>
           </div>
         </div>
 
         <div class="skillgroup">
-          <h4>Test, Release &amp; Steuerung</h4>
+          <h4 data-en="Test, release &amp; governance">Test, Release &amp; Steuerung</h4>
           <div class="pills">
-            <span class="pill">Testmanagement</span>
-            <span class="pill">End-to-End-Test</span>
-            <span class="pill">Releasemanagement</span>
-            <span class="pill">Teststrategie</span>
-            <span class="pill">Logging &amp; Monitoring</span>
-            <span class="pill">Partner- und Lieferantensteuerung</span>
+            <span class="pill" data-en="Test management">Testmanagement</span>
+            <span class="pill" data-en="End-to-end testing">End-to-End-Test</span>
+            <span class="pill" data-en="Release management">Releasemanagement</span>
+            <span class="pill" data-en="Test strategy">Teststrategie</span>
+            <span class="pill" data-en="Logging &amp; monitoring">Logging &amp; Monitoring</span>
+            <span class="pill" data-en="Partner &amp; supplier management">Partner- und Lieferantensteuerung</span>
           </div>
         </div>
 
         <div class="skillgroup">
-          <h4>Werkzeuge</h4>
+          <h4 data-en="Tools">Werkzeuge</h4>
           <div class="pills">
             <span class="pill">Jira</span>
             <span class="pill">Confluence</span>
-            <span class="pill">Atlassian-Toolchain</span>
+            <span class="pill" data-en="Atlassian toolchain">Atlassian-Toolchain</span>
             <span class="pill">Miro</span>
             <span class="pill">Figma</span>
             <span class="pill">BPMN</span>
@@ -1023,14 +1044,14 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
             <span class="pill">Kibana</span>
             <span class="pill">Git</span>
             <span class="pill">Claude Code</span>
-            <span class="pill">AWS (Projektkontext)</span>
+            <span class="pill" data-en="AWS (project context)">AWS (Projektkontext)</span>
           </div>
         </div>
       </div>
 
       <div class="reveal">
         <div class="skillgroup">
-          <h4>Zertifikate</h4>
+          <h4 data-en="Certifications">Zertifikate</h4>
           <div class="certs">
             <div class="cert">
               <div class="cert__badge">SSM</div>
@@ -1051,20 +1072,20 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
         </div>
 
         <div class="skillgroup">
-          <h4>Sprachen</h4>
+          <h4 data-en="Languages">Sprachen</h4>
           <div class="langs">
             <div class="lang">
-              <span class="lang__name">Deutsch</span>
+              <span class="lang__name" data-en="German">Deutsch</span>
               <span class="lang__bar"><span class="lang__fill" style="width:100%"></span></span>
               <span class="lang__lvl">C2</span>
             </div>
             <div class="lang">
-              <span class="lang__name">Englisch</span>
+              <span class="lang__name" data-en="English">Englisch</span>
               <span class="lang__bar"><span class="lang__fill" style="width:82%"></span></span>
               <span class="lang__lvl">C1</span>
             </div>
             <div class="lang">
-              <span class="lang__name">Kroatisch</span>
+              <span class="lang__name" data-en="Croatian">Kroatisch</span>
               <span class="lang__bar"><span class="lang__fill" style="width:30%"></span></span>
               <span class="lang__lvl">A2</span>
             </div>
@@ -1072,11 +1093,11 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
         </div>
 
         <div class="skillgroup">
-          <h4>Interessen</h4>
+          <h4 data-en="Interests">Interessen</h4>
           <div class="pills">
-            <span class="pill">Rennsport</span>
-            <span class="pill">Schach</span>
-            <span class="pill">Padel-Tennis</span>
+            <span class="pill" data-en="Motorsport">Rennsport</span>
+            <span class="pill" data-en="Chess">Schach</span>
+            <span class="pill" data-en="Padel">Padel-Tennis</span>
           </div>
         </div>
       </div>
@@ -1089,8 +1110,8 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
   <div class="wrap">
     <div class="contact__grid">
       <div class="reveal">
-        <h2>Lassen Sie uns sprechen.</h2>
-        <p>
+        <h2 data-en="Let&#x27;s talk.">Lassen Sie uns sprechen.</h2>
+        <p data-en="Open to conversations about roles in business analysis, process and method work, and agile delivery — in consulting as much as in industry.">
           Offen für Gespräche zu Rollen in Business Analyse, Prozess- und Methodenarbeit sowie agiler
           Delivery — in der Beratung wie in der Industrie.
         </p>
@@ -1106,7 +1127,7 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
         </div>
         <div class="contact__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
-          <span>Region Stuttgart</span>
+          <span data-en="Stuttgart region">Region Stuttgart</span>
         </div>
       </div>
     </div>
@@ -1118,13 +1139,90 @@ main > section[id], main > header[id]{scroll-margin-top:var(--nav-h)}
 <footer class="footer">
   <div class="wrap footer__inner">
     <span>© <span id="year">2026</span> Filip Stanicak</span>
-    <span><a href="#profil">Nach oben ↑</a></span>
+    <span><a href="#profil" data-en="Back to top ↑">Nach oben ↑</a></span>
   </div>
 </footer>
 
 <script>
 (function () {
   'use strict';
+
+  /* ---- Sprachumschaltung ----
+     Deutsch steht im Markup, Englisch in data-en/-alt/-aria. Der deutsche
+     Originaltext wird beim ersten Wechsel in einer WeakMap gesichert, damit
+     das Dokument nicht mit data-de-Attributen aufgeblaeht wird. */
+  var META = {
+    de: {
+      titel: 'Filip Stanicak — Senior Consultant | Business Analyse & Agile Delivery',
+      beschreibung: 'Senior Consultant für Business Analyse, Prozessdesign und agile Delivery. Baut Release- und Testmanagement, Vorgehensmodelle und KPI-Systeme dort auf, wo es sie vorher nicht gab. Seit 2019 im Automotive-Umfeld.'
+    },
+    en: {
+      titel: 'Filip Stanicak — Senior Consultant | Business Analysis & Agile Delivery',
+      beschreibung: 'Senior Consultant for business analysis, process design and agile delivery. Builds release and test management, delivery frameworks and KPI systems where none existed before. In automotive since 2019.'
+    }
+  };
+
+  var original = new WeakMap();
+  var textEls  = document.querySelectorAll('[data-en]');
+  var altEls   = document.querySelectorAll('[data-en-alt]');
+  var ariaEls  = document.querySelectorAll('[data-en-aria]');
+  var langBtns = document.querySelectorAll('[data-lang-set]');
+
+  function merken(el, schluessel, wert) {
+    var eintrag = original.get(el) || {};
+    if (!(schluessel in eintrag)) { eintrag[schluessel] = wert; original.set(el, eintrag); }
+    return original.get(el)[schluessel];
+  }
+
+  function setzeSprache(lang, merkenInUrl) {
+    var en = lang === 'en';
+    document.documentElement.lang = en ? 'en' : 'de';
+
+    Array.prototype.forEach.call(textEls, function (el) {
+      var de = merken(el, 'text', el.textContent);
+      el.textContent = en ? el.getAttribute('data-en') : de;
+    });
+    Array.prototype.forEach.call(altEls, function (el) {
+      var de = merken(el, 'alt', el.getAttribute('alt'));
+      el.setAttribute('alt', en ? el.getAttribute('data-en-alt') : de);
+    });
+    Array.prototype.forEach.call(ariaEls, function (el) {
+      var de = merken(el, 'aria', el.getAttribute('aria-label'));
+      el.setAttribute('aria-label', en ? el.getAttribute('data-en-aria') : de);
+    });
+
+    document.title = META[lang].titel;
+    var beschreibung = document.querySelector('meta[name="description"]');
+    if (beschreibung) beschreibung.setAttribute('content', META[lang].beschreibung);
+
+    Array.prototype.forEach.call(langBtns, function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang-set') === lang ? 'true' : 'false');
+    });
+
+    try { localStorage.setItem('sprache', lang); } catch (e) {}
+
+    if (merkenInUrl && window.history && history.replaceState) {
+      var url = new URL(window.location.href);
+      if (lang === 'de') url.searchParams.delete('lang');
+      else url.searchParams.set('lang', 'en');
+      history.replaceState(null, '', url.toString().replace(/\?$/, ''));
+    }
+  }
+
+  var ausUrl = null;
+  try { ausUrl = new URL(window.location.href).searchParams.get('lang'); } catch (e) {}
+  var gespeichert = null;
+  try { gespeichert = localStorage.getItem('sprache'); } catch (e) {}
+  var start = (ausUrl === 'en' || ausUrl === 'de') ? ausUrl
+            : (gespeichert === 'en' || gespeichert === 'de') ? gespeichert
+            : 'de';
+  if (start === 'en') setzeSprache('en', false);
+
+  Array.prototype.forEach.call(langBtns, function (b) {
+    b.addEventListener('click', function () {
+      setzeSprache(b.getAttribute('data-lang-set'), true);
+    });
+  });
 
   /* ---- Jahr im Footer ---- */
   var yearEl = document.getElementById('year');

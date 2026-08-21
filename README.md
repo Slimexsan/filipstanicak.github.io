@@ -24,6 +24,20 @@ Mischung aus beiden Lebensläufen:
 | Vollständige Projektübersicht (10 Projekte) | Bosch-Details, Bachelorarbeit-Bezug |
 
 Sektionen: Profil · Ansatz · Schwerpunkte · Werdegang · Projekte (filterbar) · Kompetenzen · Kontakt.
+## Zweisprachigkeit
+
+Deutsch steht als Text im Markup, Englisch haengt als `data-en`-Attribut am jeweiligen Element;
+fuer uebersetzte Attribute gibt es `data-en-alt` und `data-en-aria`. Ohne JavaScript zeigt die Seite
+also Deutsch, was zugleich die Fassung ist, die Suchmaschinen indexieren.
+
+Der Umschalter oben rechts setzt `documentElement.lang`, tauscht Titel und Meta-Beschreibung,
+merkt sich die Wahl in `localStorage` und schreibt sie als `?lang=en` in die Adresse. Damit laesst
+sich ein Link gezielt auf Englisch teilen: `https://filipstanicak.github.io/?lang=en`
+
+**Text aendern:** Deutsch im Element, Englisch im `data-en`-Attribut desselben Elements. Beides
+gehoert zusammen gepflegt, sonst laufen die Fassungen auseinander. Titel und Meta-Beschreibung
+stehen doppelt: im `<head>` (deutsch) und im `META`-Objekt im Skript (beide Sprachen).
+
 Dark Mode richtet sich automatisch nach der Systemeinstellung. Ein Druck-Stylesheet ist hinterlegt:
 Wer die Seite über Strg+P ausgibt, bekommt ein sauberes Dokument ohne Navigation und Filter — ein
 eigener Button dafür ist bewusst nicht vorhanden.
